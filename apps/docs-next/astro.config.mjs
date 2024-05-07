@@ -5,10 +5,10 @@ import starlight from '@astrojs/starlight'
 export default defineConfig({
   integrations: [
     starlight({
-      title: '',
+      title: 'threlte',
       logo: {
         src: './public/logo/threlte-logo.png',
-        alt: 'threlte',
+        alt: 'cube pyramid',
         replacesTitle: true
       },
       social: {
