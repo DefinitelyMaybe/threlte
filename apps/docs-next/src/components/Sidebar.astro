@@ -1,0 +1,19 @@
+---
+import type { Props } from '@astrojs/starlight/props'
+
+import MobileMenuFooter from '@astrojs/starlight/components/MobileMenuFooter.astro'
+import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro'
+
+const { sidebar } = Astro.props
+const { pathname } = Astro.url
+const x = pathname.split('/')
+const first = x[1]
+const second = x[2]
+const firstItems = sidebar.find((item) => item.label == first)?.entries
+const secondItems = firstItems.find((item) => item.label == second)?.entries
+---
+
+<SidebarSublist sublist={secondItems} />
+<div class="md:sl-hidden">
+  <MobileMenuFooter {...Astro.props} />
+</div>
