@@ -1,3 +1,12 @@
-:root {
+/* :root {
   --sl-nav-height: 8rem;
+} */
+/* Dark mode colors. */
+:root {
+  --sl-color-black: #0a0f19;
+  --sl-color-bg-nav: #0a0f19;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+  --sl-color-black: #ffffff;
 }

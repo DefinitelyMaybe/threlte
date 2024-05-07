@@ -5,10 +5,18 @@ import starlight from '@astrojs/starlight'
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
-      social: {
-        github: 'https://github.com/withastro/starlight'
+      title: '',
+      logo: {
+        src: './public/logo/threlte-logo.png',
+        alt: 'threlte',
+        replacesTitle: true
       },
+      social: {
+        github: 'https://github.com/threlte/threlte',
+        discord: 'https://discord.gg/EqUBCfCaGm',
+        twitter: 'https://twitter.com/threlte'
+      },
+      customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
           label: 'Guides',
