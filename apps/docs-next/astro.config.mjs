@@ -16,7 +16,7 @@ export default defineConfig({
         discord: 'https://discord.gg/EqUBCfCaGm',
         twitter: 'https://twitter.com/threlte'
       },
-      customCss: ['./src/styles/custom.css'],
+      customCss: ['./src/styles/app.css'],
       sidebar: [
         {
           label: 'Guides',

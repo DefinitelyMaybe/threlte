@@ -1,0 +1,43 @@
+/* Dark mode colors. */
+:root {
+  --sl-color-bg-sidebar: #0a0f19;
+  --sl-color-black: #0a0f19;
+  --sl-color-bg-nav: #0a0f19;
+  /* --sl-nav-height: 8rem; */
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+  --sl-color-black: #ffffff;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2f7dc630;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f7dc6aa;
+}
