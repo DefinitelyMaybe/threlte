@@ -42,10 +42,10 @@ Every Threlte app has a single scheduler. It is accessible via [`useThrelte()`](
 const { scheduler } = useThrelte()
 ```
 
-<Tip type="info">
-  Usually you won't need to interact with the scheduler directly. It is used internally by Threlte.
-  However, you can use it to create stages and run tasks manually for more advanced use cases.
-</Tip>
+:::note
+Usually you won't need to interact with the scheduler directly. It is used internally by Threlte.
+However, you can use it to create stages and run tasks manually for more advanced use cases.
+:::
 
 ## Stages
 
@@ -86,7 +86,9 @@ const afterRenderStage = useStage('after-render', {
 All tasks added to the stage `afterRenderStage` will be executed after the tasks
 of the stage `renderStage`.
 
-<Tip type="tip">Be aware that `useStage` never removes a stage as that's usually not needed.</Tip>
+:::tip
+Be aware that `useStage` never removes a stage as that's usually not needed.
+:::
 
 A stage decides **when and how its tasks are executed**. By default, a stage will
 execute its tasks on every frame. You can change this behavior by passing a
@@ -127,10 +129,10 @@ const { scheduler } = useThrelte()
 scheduler.removeStage(afterRenderStage)
 ```
 
-<Tip>
+:::note
   Be aware that removing a stage will also remove all the tasks in that stage. Usually, you won't
   need to remove a stage.
-</Tip>
+:::
 
 ## Tasks
 
@@ -284,12 +286,12 @@ useTask('some-task', (delta) => {
 })
 ```
 
-<Tip type="warning">
-  If a task is passed by reference to the `before` or `after` option, the task created by `useTask`
-  will automatically be added to the same stage as the task it depends on. If you pass a key instead
-  and the task you want to reference is **not** in [Threlte's `mainStage`](#default-stages), you
-  will also need to pass the stage, either by value or key.
-</Tip>
+:::caution
+If a task is passed by reference to the `before` or `after` option, the task created by `useTask`
+will automatically be added to the same stage as the task it depends on. If you pass a key instead
+and the task you want to reference is **not** in [Threlte's `mainStage`](#default-stages), you
+will also need to pass the stage, either by value or key.
+:::
 
 ## Reviewing the schedule
 

@@ -6,21 +6,21 @@ sourcePath: 'packages/core/src/lib/hooks/legacy/useRender.ts'
 order: 7.2
 ---
 
-<Tip type="danger">
-  This hook is deprecated and will be removed in the next major release. Please use
-  [`useTask`](/docs/reference/core/use-task) instead. See the [migration
-  guide](/docs/learn/advanced/migration-guides#migrating-from-useframe-and-userender-to-the-task-scheduling-system)
-  for more information.
-</Tip>
+:::danger
+This hook is deprecated and will be removed in the next major release. Please use
+[`useTask`](/docs/reference/core/use-task) instead. See the [migration
+guide](/docs/learn/advanced/migration-guides#migrating-from-useframe-and-userender-to-the-task-scheduling-system)
+for more information.
+:::
 
 This hook allows you to execute code on every **invalidated** frame and after all `useFrame` hooks have been executed.
 You receive the state (the same as [`useThrelte`](/docs/reference/core/use-threlte)) and a clock delta in seconds.
 Typically this hook is used to implement advanced rendering techniques such as post processing or custom render passes.
 
-<Tip type="warning">
-  As soon as this hook is used anywhere in the component tree, the default render loop is disabled.
-  You need to take care of rendering yourself.
-</Tip>
+:::caution
+As soon as this hook is used anywhere in the component tree, the default render loop is disabled.
+You need to take care of rendering yourself.
+:::
 
 You may pass additional options to this hook. The property `order` is useful if you need to order the sequence of `useRender` callbacks across the component tree where callbacks are ordered from low to high.
 
@@ -42,13 +42,14 @@ type ThrelteUseRenderOptions = {
 </script>
 ```
 
-<Tip type="tip">
-  The state available in the callback is the same as the one available with <code>useThrelte</code>.
-  Some properties (such as the property `camera`) use a `CurrentWritable` store. which is a custom
-  Threlte store. It's a regular writable store that also has a `current` property which is the
-  current value of the store. It's useful for accessing the value of a store in a non-reactive
-  context, such as in loops.
-</Tip>
+:::tip
+The state available in the callback is the same as the one available with <code>useThrelte</code>.
+Some properties (such as the property `camera`) use a `CurrentWritable` store. which is a custom
+Threlte store. It's a regular writable store that also has a `current` property which is the
+current value of the store. It's useful for accessing the value of a store in a non-reactive
+context, such as in loops.
+
+:::
 
 ### Post Processing
 
@@ -56,9 +57,9 @@ This example demonstrates how to use `useRender` to implement post processing
 effects using the library
 [`postprocessing`](https://github.com/pmndrs/postprocessing).
 
-<Tip type="warning">
-  When using SvelteKit (or more broadly, SSR) be sure to add `ssr: { noExternal: [ 'postprocessing' ] }` to your `vite.config.js`.
-</Tip>
+:::caution
+When using SvelteKit (or more broadly, SSR) be sure to add `ssr: { noExternal: [ 'postprocessing' ] }` to your `vite.config.js`.
+:::
 
 ```svelte title="Renderer.svelte"
 <script>

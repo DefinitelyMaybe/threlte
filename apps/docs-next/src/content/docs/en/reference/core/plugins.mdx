@@ -63,9 +63,10 @@ injectPlugin('plugin-name', ({ ref, props }) => {
 
 You may also override a plugin namespace further down the tree by calling `injectPlugin` again with the same plugin name.
 
-<Tip type="tip">
-	`injectPlugin` is relying on a context provided by your root `<Canvas>` component and can therefore only be used inside a `<Canvas>` component.
-</Tip>
+:::tip
+`injectPlugin` is relying on a context provided by your root `<Canvas>` component and can therefore only be used inside a `<Canvas>` component.
+
+:::
 
 ---
 

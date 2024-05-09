@@ -3,11 +3,11 @@ title: Your First Scene
 category: Getting Started
 ---
 
-<Tip type="info">
-  You should be versed in both Svelte and Three.js before rushing into Threlte. If you are unsure
-  about Svelte, consult its [Tutorial](https://svelte.dev/tutorial) for a quick introduction. As for
-  Threejs, make sure you at least glance over its [official documentation](https://threejs.org).
-</Tip>
+:::note
+You should be versed in both Svelte and Three.js before rushing into Threlte. If you are unsure
+about Svelte, consult its [Tutorial](https://svelte.dev/tutorial) for a quick introduction. As for
+Threejs, make sure you at least glance over its [official documentation](https://threejs.org).
+:::
 
 ## Structuring Your App
 
@@ -63,8 +63,9 @@ We should now be looking at a white cube on a transparent background.
   hideCode
 />
 
-<Tip type="info">
-  #### attach
+:::note
+
+#### attach
 
 Behind the scenes we're using the property `attach` available on `<T>` to **attach an object to a property of
 its parent**. Binding geometries to the property `geometry` and materials to the property `material` is a common
@@ -98,7 +99,7 @@ pattern so Threlte takes care of it for you.
     the underlying Three.js object and attaches it to the correct property.
 
   </details>
-</Tip>
+:::
 
 <details>
 	<summary>
@@ -213,25 +214,19 @@ of props like `position.y` in our `<T.Mesh>`.
 
 </details>
 
-<Tip
-  type="tip"
-  title="Primitive Values"
->
-  From a performance perspective, it's often better to use pierced props because
-  [primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) prop values can safely be
-  compared for equality. This means that if the value of a prop doesn't change, Threlte will skip
-  any updates to the underlying Three.js object.
-</Tip>
+:::tip[Primitive Values]
+From a performance perspective, it's often better to use pierced props because
+[primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) prop values can safely be
+compared for equality. This means that if the value of a prop doesn't change, Threlte will skip
+any updates to the underlying Three.js object.
+:::
 
-<Tip
-  type="warning"
-  title="Constant prop types"
->
-  The type of an inferred prop (or "auto prop") must be constant. This means that the type of a prop
-  must not change for the lifetime of the component. For instance you can't use a variable as a prop
-  that is an array of numbers and then later on change the value of that variable to a single
-  number. This is considered a type change and therefore not allowed.
-</Tip>
+:::caution[Constant prop types]
+The type of an inferred prop (or "auto prop") must be constant. This means that the type of a prop
+must not change for the lifetime of the component. For instance you can't use a variable as a prop
+that is an array of numbers and then later on change the value of that variable to a single
+number. This is considered a type change and therefore not allowed.
+:::
 
 ## Pointing the Camera
 
@@ -267,13 +262,14 @@ We're again using the `<T>` component to create a [`THREE.PerspectiveCamera`](ht
 We're also passing a `makeDefault` prop which will make this camera the default camera of our application.
 The renderer now uses this camera to render our scene.
 
-<Tip type="info">
-  #### Events
+:::note
+
+#### Events
 
 Threlte supports listening to certain <a href="/docs/reference/core/t#events">events on `<T/>` components</a>. Here, we use the `create`
 event to get a reference to the underlying Three.js object as soon as it's created and use the method `lookAt` to look at the cube.
 
-</Tip>
+:::
 
 ## Enabling Interactivity
 
@@ -320,7 +316,7 @@ and apply the stores value to the property `scale` of the component `<T.Mesh>`.
   hideCode
 />
 
-<Tip type="info" title="Automatic Vector & Scalar Detection">
+:::note[Automatic Vector & Scalar Detection]
   You might have noticed that we're only passing a single number to the prop `scale` on `<T.Mesh>`. Threlte automatically
   figures out whether you are passing an array or a number and uses the appropriate underlying Three.js method.
 
@@ -331,16 +327,13 @@ and apply the stores value to the property `scale` of the component `<T.Mesh>`.
     The component `<T>` will first look for a property `setScalar` on	the underlying Three.js object and use that method if
     only a single number is passed. This is equivalent to calling `scale.setScalar($scale)`.
   </details>
-</Tip>
+:::
 
-<Tip
-  type="tip"
-  title="Realtime Variables"
->
-  When working with realtime apps where variables e.g. position and rotation change constantly, an
-  easy way observe the values is with [live
-  expressions](https://developer.chrome.com/docs/devtools/console/live-expressions/).
-</Tip>
+:::tip[Realtime Variables]
+When working with realtime apps where variables e.g. position and rotation change constantly, an
+easy way observe the values is with [live
+expressions](https://developer.chrome.com/docs/devtools/console/live-expressions/).
+:::
 
 ## Adding Animation
 

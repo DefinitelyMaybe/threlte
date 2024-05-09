@@ -6,10 +6,10 @@ order: -500
 
 A typical Threlte application will make use of textures, models, and other assets. These assets are loaded using the `useLoader` hook. Assets loaded via `useLoader` are automatically cached and will not be loaded or parsed again if they are already in the cache.
 
-<Tip type="info">
-  This section assumes you placed your assets in your public folder or in a place in your
-  application where you can import them easily.
-</Tip>
+:::note
+This section assumes you placed your assets in your public folder or in a place in your
+application where you can import them easily.
+:::
 
 ## Loading Models
 
@@ -135,13 +135,10 @@ You can then import this component and use it in your application:
 {/await}
 ```
 
-<Tip
-  type="warning"
-  title="Model Is Cached"
->
-  Keep in mind that this hook caches the result and therefore is most suitable for loading models
-  that are placed in the scene only once.
-</Tip>
+:::caution[Model Is Cached]
+Keep in mind that this hook caches the result and therefore is most suitable for loading models
+that are placed in the scene only once.
+:::
 
 ## Loading Textures
 
@@ -194,10 +191,10 @@ We can then spread the textures on a material via Svelte's spread syntax:
 {/if}
 ```
 
-<Tip type="tip">
-  Keep in mind that the promise only resolves and the store gets populated once all textures have
-  loaded.
-</Tip>
+:::tip
+Keep in mind that the promise only resolves and the store gets populated once all textures have
+loaded.
+:::
 
 ### Applying different textures to different faces
 

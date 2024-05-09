@@ -19,7 +19,9 @@ watch(store, (value) => {
 })
 ```
 
-<Tip type="info">This utility function needs to be called during component initialization.</Tip>
+:::note
+This utility function needs to be called during component initialization.
+:::
 
 You can also watch multiple stores:
 
@@ -64,7 +66,9 @@ const memoized = memoize([numberStore, stringStore])
 console.log(memoized.current) // [0, 'hello']
 ```
 
-<Tip type="info">This utility function needs to be called during component initialization.</Tip>
+:::note
+This utility function needs to be called during component initialization.
+:::
 
 You can also pass a transform function to transform the values:
 
