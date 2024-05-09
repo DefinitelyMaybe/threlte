@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 
+import tailwind from '@astrojs/tailwind'
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'threlte',
+      title: 'Threlte',
       logo: {
         src: './public/logo/threlte-logo.png',
         alt: 'cube pyramid',
@@ -19,21 +21,32 @@ export default defineConfig({
       customCss: ['./src/styles/app.css'],
       sidebar: [
         {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', link: '/guides/example/' }
-          ]
-        },
-        {
           label: 'Learn',
-          autogenerate: { directory: 'learn' }
+          autogenerate: {
+            directory: 'learn'
+          }
         },
         {
           label: 'Reference',
-          autogenerate: { directory: 'reference' }
+          autogenerate: {
+            directory: 'reference'
+          }
         }
-      ]
+      ],
+      defaultLocale: 'en',
+      locales: {
+        // English docs in `src/content/docs/en/`
+        en: {
+          label: 'English'
+        }
+      },
+      editLink: {
+        baseUrl: 'https://github.com/threlte/threlte/edit/main/apps/docs'
+      }
+    }),
+    tailwind({
+      // Disable the default base styles:
+      applyBaseStyles: false
     })
   ]
 })

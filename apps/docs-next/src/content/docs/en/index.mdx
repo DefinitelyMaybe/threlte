@@ -2,13 +2,15 @@
 title: Welcome to Starlight
 description: Get started building your docs site with Starlight.
 template: splash
+editUrl: false
+lastUpdated: false
 hero:
   tagline: Congrats on setting up a new Starlight project!
   image:
-    file: ../../assets/houston.webp
+    file: ../../../assets/houston.webp
   actions:
     - text: Getting Started
-      link: /learn/getting-started/introduction
+      link: en/learn/getting-started/introduction
       icon: right-arrow
       variant: primary
     - text: Read the Starlight docs
@@ -21,3 +23,19 @@ hero:
 ## Hello world
 
 hello world
+
+```svelte {2} title="Hello.svelte"
+<script>
+  let x = 'hello world'
+</script>
+
+<p>{x}</p>
+```
+
+:::caution
+what should I be worried about?
+:::
+
+:::danger
+Do not pass go, do not collect $200
+:::
