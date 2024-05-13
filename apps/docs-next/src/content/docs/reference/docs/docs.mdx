@@ -1,0 +1,69 @@
+---
+title: Writing Documentation
+category: 'Documentation'
+---
+
+These docs use astro starlight! head over to their docs to learn all about [creating and editing content](https://starlight.astro.build/guides/authoring-content/) with markdown.
+
+To edit a page there's a `Edit page` link at the bottom which will take you to github.
+
+## Auto-imported components
+
+These components can be used in .mdx files without explicitly importing them.
+
+### `<Example>`
+
+The component `<Example>` renders an example that is defined in the `src/examples` folder.
+
+```mdx title="example.mdx"
+<Example path="core/use-frame" />
+```
+
+renders as:
+
+{/* <Example path="core/use-frame" /> */}
+
+Hide the code:
+
+```mdx title="example.mdx"
+<Example
+  path="core/use-frame"
+  hideCode
+/>
+```
+
+Hide the preview:
+
+```mdx title="example.mdx"
+<Example
+  path="core/use-frame"
+  hidePreview
+/>
+```
+
+Expand the code section by default:
+
+```mdx title="example.mdx"
+<Example
+  path="core/use-frame"
+  expandCode
+/>
+```
+
+Show a specific file by default:
+
+```mdx title="example.mdx"
+<Example
+  path="core/use-frame"
+  showFile="directory/file.ts"
+/>
+```
+
+All `<Example>`'s are iframes by default but this can be changed by setting the iframe prop to false
+
+```mdx title="example.mdx"
+<Example
+  path="core/use-frame"
+  iframe={false}
+/>
+```

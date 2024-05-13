@@ -30,15 +30,40 @@ export default defineConfig({
         },
         {
           label: 'Reference',
-          autogenerate: {
-            directory: 'reference'
-          }
+          items: [
+            {
+              label: 'Core',
+              items: [
+                {
+                  label: 'Getting Started',
+                  link: 'reference/core/getting-started'
+                },
+                {
+                  label: 'Components',
+                  autogenerate: {
+                    directory: 'reference/core/components'
+                  }
+                },
+                {
+                  label: 'Hooks',
+                  autogenerate: {
+                    directory: 'reference/core/hooks'
+                  }
+                },
+                {
+                  label: 'helpers',
+                  autogenerate: {
+                    directory: 'reference/core/helpers'
+                  }
+                }
+              ]
+            }
+          ]
         }
       ],
-      defaultLocale: 'en',
       locales: {
-        // English docs in `src/content/docs/en/`
-        en: {
+        root: {
+          lang: 'en',
           label: 'English'
         }
       },
