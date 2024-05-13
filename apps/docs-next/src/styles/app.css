@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-faded {
+    @apply text-white/60;
+  }
+
+  .text-highlight {
+    @apply font-bold text-white;
+  }
+}
+
 /* Dark mode colors. */
 :root {
   --sl-color-bg-sidebar: #0a0f19;
