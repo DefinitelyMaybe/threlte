@@ -21,12 +21,38 @@ export default defineConfig({
         twitter: 'https://twitter.com/threlte'
       },
       customCss: ['./src/styles/app.css'],
+      components: {
+        Sidebar: './src/components/Sidebar.astro'
+      },
       sidebar: [
         {
           label: 'Learn',
-          autogenerate: {
-            directory: 'learn'
-          }
+          items: [
+            {
+              label: 'Getting Started',
+              autogenerate: {
+                directory: 'learn/getting-started'
+              }
+            },
+            {
+              label: 'Basics',
+              autogenerate: {
+                directory: 'learn/basics'
+              }
+            },
+            {
+              label: 'Advanced',
+              autogenerate: {
+                directory: 'learn/advanced'
+              }
+            },
+            {
+              label: 'More',
+              autogenerate: {
+                directory: 'learn/more'
+              }
+            }
+          ]
         },
         {
           label: 'Reference',

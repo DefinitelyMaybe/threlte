@@ -4,16 +4,23 @@ import type { Props } from '@astrojs/starlight/props'
 import MobileMenuFooter from '@astrojs/starlight/components/MobileMenuFooter.astro'
 import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro'
 
-const { sidebar } = Astro.props
+const { sidebar, lang } = Astro.props
 const { pathname } = Astro.url
-const x = pathname.split('/')
-const first = x[1]
-const second = x[2]
-const firstItems = sidebar.find((item) => item.label == first)?.entries
-const secondItems = firstItems.find((item) => item.label == second)?.entries
+const paths = pathname.split('/')
+const subPathA = paths[1]
+const subPathB = paths[2]
+let items
+// for other languages need to check if 'first' was language route
+if (lang != 'en') {
+  items = sidebar
+    .find((item) => item.label.toLocaleLowerCase() == subPathA)
+    ?.entries.find((item) => item.label == subPathB)?.entries
+} else {
+  items = sidebar.find((item) => item.label.toLocaleLowerCase() == subPathA)?.entries
+}
 ---
 
-<SidebarSublist sublist={secondItems} />
+<SidebarSublist sublist={items} />
 <div class="md:sl-hidden">
   <MobileMenuFooter {...Astro.props} />
 </div>
