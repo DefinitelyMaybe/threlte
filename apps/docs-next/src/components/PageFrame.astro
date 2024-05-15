@@ -7,17 +7,6 @@ const { hasSidebar, labels } = Astro.props
 
 <div class="page sl-flex">
   <header class="header border-orange/25 border-b-[1px]"><slot name="header" /></header>
-  <nav
-    class="sidebar bg-red-500"
-    aria-label={labels['menuButton.accessibleLabel']}
-  >
-    <MobileMenuToggle {...Astro.props} />
-    <div class="sidebar-pane">
-      <div class="sidebar-content sl-flex">
-        <slot name="packageNav" />
-      </div>
-    </div>
-  </nav>
   {
     hasSidebar && (
       <nav
