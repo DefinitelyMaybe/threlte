@@ -22,7 +22,9 @@ export default defineConfig({
       },
       customCss: ['./src/styles/app.css'],
       components: {
-        Sidebar: './src/components/Sidebar.astro'
+        Sidebar: './src/components/Sidebar.astro',
+        Header: './src/components/Header.astro',
+        PageFrame: './src/components/PageFrame.astro'
       },
       sidebar: [
         {

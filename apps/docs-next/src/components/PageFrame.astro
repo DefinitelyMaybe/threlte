@@ -6,7 +6,7 @@ const { hasSidebar, labels } = Astro.props
 ---
 
 <div class="page sl-flex">
-  <header class="header"><slot name="header" /></header>
+  <header class="header border-orange/25 border-b-[1px]"><slot name="header" /></header>
   <nav
     class="sidebar bg-red-500"
     aria-label={labels['menuButton.accessibleLabel']}
