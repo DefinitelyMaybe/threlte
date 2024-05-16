@@ -6,7 +6,9 @@ const { hasSidebar, labels } = Astro.props
 ---
 
 <div class="page sl-flex">
-  <header class="header border-orange/25 border-b-[1px]"><slot name="header" /></header>
+  <header class="header">
+    <slot name="header" />
+  </header>
   {
     hasSidebar && (
       <nav
@@ -45,6 +47,8 @@ const { hasSidebar, labels } = Astro.props
     padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
     padding-inline-end: var(--sl-nav-pad-x);
     background-color: var(--sl-color-bg-nav);
+    border-color: rgb(254 61 0 / 0.25);
+    border-bottom-width: 1px;
   }
 
   :global([data-has-sidebar]) .header {

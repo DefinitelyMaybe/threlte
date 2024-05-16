@@ -55,3 +55,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #2f7dc6aa;
 }
+
+@media (min-width: 800px) {
+  :root {
+    --sl-nav-height: 8rem;
+  }
+}
