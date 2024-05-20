@@ -17,6 +17,7 @@
   --sl-color-bg-sidebar: #0a0f19;
   --sl-color-black: #0a0f19;
   --sl-color-bg-nav: #0a0f19;
+  /* --sl-color-text-accent: #fe3d00; */
   /* --sl-nav-height: 8rem; */
 }
 /* Light mode colors. */
@@ -58,6 +59,6 @@
 
 @media (min-width: 800px) {
   :root {
-    --sl-nav-height: 8rem;
+    /* --sl-nav-height: 8rem; */
   }
 }

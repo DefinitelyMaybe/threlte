@@ -93,6 +93,10 @@ export default defineConfig({
         root: {
           lang: 'en',
           label: 'English'
+        },
+        'zh-cn': {
+          label: '简体中文',
+          lang: 'zh-CN'
         }
       },
       editLink: {
