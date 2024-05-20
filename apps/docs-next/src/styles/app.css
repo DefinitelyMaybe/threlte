@@ -25,6 +25,10 @@
   --sl-color-black: #ffffff;
 }
 
+.right-sidebar {
+  border-inline-start: none;
+}
+
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -57,8 +61,8 @@
   background: #2f7dc6aa;
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   :root {
-    /* --sl-nav-height: 8rem; */
+    --sl-nav-height: 8rem;
   }
-}
+} */
