@@ -15,6 +15,7 @@ export default defineConfig({
         alt: 'cube pyramid',
         replacesTitle: true
       },
+      favicon: '/icons/favicon-32x32.png',
       social: {
         github: 'https://github.com/threlte/threlte',
         discord: 'https://discord.gg/EqUBCfCaGm',
