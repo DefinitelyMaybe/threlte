@@ -23,7 +23,12 @@ if (process.env.NODE_ENV === 'production') {
 
 // https://astro.build/config
 export default defineConfig({
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true
+  },
+  experimental: {
+    clientPrerender: true
+  },
   build: {
     inlineStylesheets: 'never'
   },
@@ -32,7 +37,6 @@ export default defineConfig({
       imports: [
         '$components/Example/Example.astro',
         '$components/Tip/Tip.astro',
-        '$components/ManualInstallGuide/ManualInstallGuide.svelte',
         '$components/Card/Card.astro'
       ]
     }),

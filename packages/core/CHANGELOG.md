@@ -1,5 +1,24 @@
 # @threlte/core
 
+## 8.0.0-next.6
+
+### Patch Changes
+
+- 36128d5: Replace events with callback props and slots with snippets
+
+## 8.0.0-next.5
+
+### Patch Changes
+
+- 2ccf508: Remove userSize canvas prop
+- 750550b: Remove useLegacyLights prop
+
+## 8.0.0-next.4
+
+### Patch Changes
+
+- f7c501d: Remove legacy useFrame and useRender hooks
+
 ## 8.0.0-next.3
 
 ### Patch Changes
