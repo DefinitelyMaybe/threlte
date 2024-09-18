@@ -1,0 +1,22 @@
+---
+import Layout from '../../../layouts/Examples.astro'
+import Loader from './_Loader.svelte'
+
+export async function getStaticPaths() {
+	const demos = import.meta.glob('../../../examples/**/App.svelte')
+	const keys = Object.keys(demos) as string[]
+	const slugs = keys.map((key) => key.replace('../../../examples/', '').replace('/App.svelte', ''))
+
+	return slugs.map((slug) => {
+		return {
+			params: { slug }
+		}
+	})
+}
+
+const slug = Astro.params.slug
+---
+
+<Layout>
+	<Loader client:load slug={slug} />
+</Layout>

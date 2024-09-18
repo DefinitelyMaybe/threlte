@@ -1,0 +1,68 @@
+---
+import Code from '$components/Code.astro'
+import SvelteWrapper from './SvelteWrapper.svelte'
+import CodeWrapper from './CodeWrapper.svelte'
+
+interface Props {
+	/**
+	 * The path to the entry App.svelte file relative to src/examples
+	 */
+	path: string
+	hideCode?: boolean
+	showFile?: string
+	expandCode?: boolean
+	previewClass?: string
+	hideStackblitz?: boolean
+}
+
+const allSourcePaths = import.meta.glob('../../examples/**/*', {
+	query: '?raw',
+	import: 'default',
+	eager: true
+}) as Record<string, string>
+
+for (const path in allSourcePaths) {
+	if (!path.replace('../../examples/', '').startsWith(Astro.props.path)) {
+		delete allSourcePaths[path]
+	}
+}
+
+const files: Record<string, string> = {}
+for (const path in allSourcePaths) {
+	let relativePath = path.replace('../../examples/', '').replace(Astro.props.path, '').slice(1)
+	if (relativePath.startsWith('/')) {
+		relativePath = relativePath.slice(1)
+	}
+	files[relativePath] = allSourcePaths[path] as string
+}
+
+const hideCode = Astro.props.hideCode ?? false
+---
+
+<SvelteWrapper
+	hideStackblitz={Astro.props.hideStackblitz}
+	class={Astro.props.previewClass}
+	hideCode={hideCode}
+	path={Astro.props.path}
+	client:load
+	files={files}
+/>
+
+{
+	!hideCode && (
+		<CodeWrapper
+			showFile={Astro.props.showFile}
+			expanded={Astro.props.expandCode}
+			client:load
+			filePaths={Object.keys(allSourcePaths).map((path) =>
+				path.replace('../../examples/', '').replace(Astro.props.path, '').slice(1)
+			)}
+		>
+			{Object.entries(allSourcePaths).map(([path, mod]) => (
+				<div data-path={path}>
+					<Code code={mod} lang={path.split('.').pop() ?? 'svelte'} class="!mb-0" />
+				</div>
+			))}
+		</CodeWrapper>
+	)
+}
