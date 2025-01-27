@@ -20,19 +20,13 @@
   const parent = useParent()
 
   // serves as a map to map (custom) prop names to object target properties
-  let propMappings = {} as Record<
-    string,
-    {
-      propertyPath: string
-      transformer: Transformer
-    }
-  >
+  let propMappings = {} as Record<string, { propertyPath: string; transformer: Transformer }>
 
   const initProps = () => {
     const props = {} as Record<string, any>
 
     // propertyPath is for example "position.x" or "intensity", so a property path on the parent object
-    Object.entries(<Record<string, AnyProp>>rest).forEach(([propertyPath, propertyValue]) => {
+    Object.entries(rest as Record<string, AnyProp>).forEach(([propertyPath, propertyValue]) => {
       // The prop might have a custom name, for example "intensity" might be mapped to "light-intensity"
       const customKey = isComplexProp(propertyValue)
         ? propertyValue.key

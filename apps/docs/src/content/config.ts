@@ -1,5 +1,7 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, z } from 'astro:content'
+import { docsLoader } from '@astrojs/starlight/loaders'
+import { docsSchema } from '@astrojs/starlight/schema'
 
 export const componentSignature = z.object({
   pretext: z.string().optional(),
@@ -155,6 +157,7 @@ export const blogCollection = defineCollection({
 
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
+  docs: defineCollection({ loader: docsLoader(), schema: docsSchema() }),
   reference: referenceCollection,
   learn: learnCollection,
   testimonials: testimonialsCollection,
