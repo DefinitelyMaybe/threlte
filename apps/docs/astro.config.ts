@@ -43,11 +43,7 @@ export default defineConfig({
       ]
     }),
     tailwind(),
-    svelte({
-      preprocess: preprocess({
-        postcss: true
-      })
-    }),
+    svelte(),
     mdx({
       rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
     }),
