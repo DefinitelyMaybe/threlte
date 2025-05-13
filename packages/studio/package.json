@@ -49,6 +49,21 @@
     "vite-plugin-inspect": "0.8.6",
     "vitest": "^2.1.5"
   },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.4",
+    "@mdi/js": "^7.4.47",
+    "@tweakpane/plugin-camerakit": "^0.3.0",
+    "camera-controls": "^2.10.1",
+    "estree-walker": "^3.0.3",
+    "flexible-tree": "^0.1.6",
+    "index-to-position": "^1.0.0",
+    "json5": "^2.2.3",
+    "kleur": "^4.1.5",
+    "magic-string": "^0.30.10",
+    "svelte-tweakpane-ui": "^1.2.3",
+    "tweakpane": "4.0.3",
+    "vite-dev-rpc": "^0.1.4"
+  },
   "peerDependencies": {
     "svelte": ">=5",
     "three": ">=0.152",
@@ -58,7 +73,8 @@
   "exports": {
     ".": {
       "types": "./src/lib/index.ts",
-      "svelte": "./src/lib/index.ts"
+      "svelte": "./src/lib/index.ts",
+      "default": "./src/lib/index.ts"
     },
     "./extensions": {
       "types": "./src/lib/extensions.ts",
@@ -76,15 +92,11 @@
       "default": "./src/lib/vite.ts"
     }
   },
-  "types": "./src/lib/index.ts",
-  "svelte": "./src/lib/index.ts",
   "publishOverrides": {
-    "types": "./dist/index.d.ts",
     "files": [
       "dist",
       "vite"
     ],
-    "svelte": "./dist/index.js",
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
@@ -108,20 +120,5 @@
         "default": "./vite/vite.js"
       }
     }
-  },
-  "dependencies": {
-    "@floating-ui/dom": "^1.6.4",
-    "@mdi/js": "^7.4.47",
-    "@tweakpane/plugin-camerakit": "^0.3.0",
-    "camera-controls": "^2.10.1",
-    "estree-walker": "^3.0.3",
-    "flexible-tree": "^0.1.6",
-    "index-to-position": "^1.0.0",
-    "json5": "^2.2.3",
-    "kleur": "^4.1.5",
-    "magic-string": "^0.30.10",
-    "svelte-tweakpane-ui": "^1.2.3",
-    "tweakpane": "4.0.3",
-    "vite-dev-rpc": "^0.1.4"
   }
 }
