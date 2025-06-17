@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+    },
+    "astro": {
+      "type": "sse",
+      "url": "http://localhost:4321/__mcp/sse"
+    }
+  }
+}

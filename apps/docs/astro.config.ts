@@ -17,6 +17,7 @@ import svelte from '@astrojs/svelte'
 
 // https://astro.build/config
 import mdx from '@astrojs/mdx'
+import mcp from 'astro-mcp'
 
 const noExternal = ['three', 'troika-three-text', 'postprocessing', '@pmndrs/vanilla']
 if (process.env.NODE_ENV === 'production') {
@@ -51,7 +52,8 @@ export default defineConfig({
     mdx({
       rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
     }),
-    preact({ compat: true, include: ['**/*.tsx'] })
+    preact({ compat: true, include: ['**/*.tsx'] }),
+    mcp()
   ],
   output: 'static',
   vite: {
