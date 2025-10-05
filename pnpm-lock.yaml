@@ -173,6 +173,9 @@ importers:
       preact:
         specifier: ^10.27.1
         version: 10.27.1
+      sharp:
+        specifier: ^0.31.3
+        version: 0.31.3
       three-custom-shader-material:
         specifier: ^6.3.7
         version: 6.3.7(react@18.2.0)(three@0.175.0)
@@ -285,9 +288,6 @@ importers:
       runed:
         specifier: ^0.15.3
         version: 0.15.3(svelte@5.26.2)
-      sharp:
-        specifier: ^0.31.3
-        version: 0.31.3
       shiki:
         specifier: ^0.14.3
         version: 0.14.3
