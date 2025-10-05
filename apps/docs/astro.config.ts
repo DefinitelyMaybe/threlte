@@ -1,5 +1,5 @@
 import AutoImport from 'astro-auto-import'
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 import { resolve } from 'path'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
@@ -21,6 +21,9 @@ if (process.env.NODE_ENV === 'production') {
 export default defineConfig({
   markdown: {
     syntaxHighlight: false
+  },
+  image: {
+    service: passthroughImageService()
   },
   prefetch: {
     prefetchAll: true
