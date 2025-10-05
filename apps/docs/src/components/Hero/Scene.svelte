@@ -4,7 +4,7 @@
   import { Float, Grid, OrbitControls, Portal, RadialGradientTexture } from '@threlte/extras'
   import { SheetObject } from '@threlte/theatre'
   import { onMount } from 'svelte'
-  import AnimatableCube from './AnimatableCube.svelte'
+  // import AnimatableCube from './AnimatableCube.svelte'
   import AnimatableStarField from './AnimatableStarField.svelte'
   import KeyboardControls from './KeyboardControls.svelte'
   import PostProcessing from './PostProcessing.svelte'
@@ -207,22 +207,22 @@
                     {#snippet children({ transform })}
                       <Transform {...transform}>
                         <!-- TOP -->
-                        <AnimatableCube key="Box Top" />
+                        <!-- <AnimatableCube key="Box Top" /> -->
 
                         <!-- MIDDLE -->
-                        <AnimatableCube key="Box Middle" />
+                        <!-- <AnimatableCube key="Box Middle" /> -->
 
                         <!-- BOTTOM X+ -->
-                        <AnimatableCube key="Box Bottom X+" />
+                        <!-- <AnimatableCube key="Box Bottom X+" /> -->
 
                         <!-- BOTTOM X- -->
-                        <AnimatableCube key="Box Bottom X-" />
+                        <!-- <AnimatableCube key="Box Bottom X-" /> -->
 
                         <!-- BOTTOM Z+ -->
-                        <AnimatableCube key="Box Bottom Z+" />
+                        <!-- <AnimatableCube key="Box Bottom Z+" /> -->
 
                         <!-- BOTTOM Z- -->
-                        <AnimatableCube key="Box Bottom Z-" />
+                        <!-- <AnimatableCube key="Box Bottom Z-" /> -->
                       </Transform>
                     {/snippet}
                   </KeyboardControls>
