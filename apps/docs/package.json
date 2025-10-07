@@ -58,6 +58,7 @@
     "@threlte/rapier": "workspace:*",
     "@threlte/studio": "workspace:*",
     "@threlte/theatre": "workspace:*",
+    "@threlte/vfx": "workspace:*",
     "@threlte/xr": "workspace:*",
     "@types/animejs": "^3.1.7",
     "@types/three": "catalog:",
