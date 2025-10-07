@@ -1,13 +1,12 @@
 <script>
   import { T, useTask } from '@threlte/core'
   import { interactivity } from '@threlte/extras'
-  import { dissolveOpacityNode, DissolveMaterial } from '@threlte/vfx'
+  import { dissolveOpacityNode } from '@threlte/vfx'
   import { Spring } from 'svelte/motion'
 
   interactivity()
 
   const scale = new Spring(1)
-  const mat = new DissolveMaterial()
 
   let rotation = $state(0)
   useTask((delta) => {
@@ -41,9 +40,9 @@
   castShadow
 >
   <T.BoxGeometry args={[1, 2, 1]} />
-  <T
-    is={mat}
+  <T.MeshStandardNodeMaterial
     color="hotpink"
+    opacityNode={dissolveOpacityNode}
     transparent
   />
 </T.Mesh>
