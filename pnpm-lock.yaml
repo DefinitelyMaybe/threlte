@@ -23,7 +23,7 @@ catalogs:
       version: 6.1.4
     '@types/node':
       specifier: ^20.19.4
-      version: 20.19.11
+      version: 22.18.0
     '@types/three':
       specifier: ^0.175.0
       version: 0.175.0
@@ -44,10 +44,10 @@ catalogs:
       version: 16.1.0
     prettier:
       specifier: ^3.2.5
-      version: 3.3.2
+      version: 3.6.2
     prettier-plugin-svelte:
       specifier: ^3.2.2
-      version: 3.2.5
+      version: 3.4.0
     publint:
       specifier: ^0.2.7
       version: 0.2.7
@@ -231,6 +231,9 @@ importers:
       '@threlte/theatre':
         specifier: workspace:*
         version: link:../../packages/theatre
+      '@threlte/vfx':
+        specifier: workspace:*
+        version: link:../../packages/vfx
       '@threlte/xr':
         specifier: workspace:*
         version: link:../../packages/xr
@@ -1003,6 +1006,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.18.0
+      '@types/three':
+        specifier: 'catalog:'
+        version: 0.175.0
       eslint:
         specifier: 'catalog:'
         version: 9.37.0(jiti@2.5.1)
