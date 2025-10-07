@@ -11,6 +11,7 @@ const referenceSidebarMenuCategoryOrder: ReferenceCategoryKey[] = [
   '@threlte/xr',
   '@threlte/flex',
   '@threlte/studio',
+  '@threlte/vfx',
   'Documentation'
 ]
 
