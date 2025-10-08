@@ -25,9 +25,9 @@ Threlte's **3D rendering** is powered by [Three.js](https://threejs.org/), and i
 
 Check out our **[documentation](https://threlte.xyz)** and our **[Discord community](https://discord.gg/EqUBCfCaGm)**.
 
-## @threlte/xr
+## @threlte/vfx
 
-[@threlte/xr](https://threlte.xyz/docs/reference/xr/getting-started) provides a set of components and hooks that make it easy to create XR experiences.
+[@threlte/vfx](https://threlte.xyz/docs/reference/vfx/getting-started) is a collections of components and TSL nodes that make it easier to create more visually stunning experiences.
 
 ## Quickstart
 
@@ -45,10 +45,6 @@ Contributions are what make the open source community such an amazing place to l
 
 - **Filing Issues** - if you have feature requestions or you think you spotted a bug, [submit an issue](https://github.com/threlte/threlte/issues/new).
 - **Contributing Code** - if you would like to drop us a PR, read the [contribution guide](https://github.com/threlte/threlte/blob/main/CONTRIBUTING.md) first.
-
-## Sponsors
-
-[![Powered by Vercel](./assets/vercel/powered-by-vercel.svg)](https://vercel.com/?utm_source=threlte&utm_campaign=oss)
 
 ---
 
