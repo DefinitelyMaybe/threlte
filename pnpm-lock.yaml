@@ -8,19 +8,19 @@ catalogs:
   default:
     '@eslint/js':
       specifier: ^9.26.0
-      version: 9.26.0
+      version: 9.37.0
     '@sveltejs/adapter-auto':
       specifier: ^6.1.0
       version: 6.1.0
     '@sveltejs/kit':
       specifier: ^2.37.0
-      version: 2.37.0
+      version: 2.44.0
     '@sveltejs/package':
       specifier: ^2.3.7
-      version: 2.3.7
+      version: 2.5.4
     '@sveltejs/vite-plugin-svelte':
       specifier: ^6.1.4
-      version: 6.1.4
+      version: 6.2.1
     '@types/node':
       specifier: ^20.19.4
       version: 22.18.0
@@ -35,13 +35,13 @@ catalogs:
       version: 0.4.0
     eslint:
       specifier: ^9.26.0
-      version: 9.26.0
+      version: 9.37.0
     eslint-plugin-svelte:
       specifier: ^3.5.1
-      version: 3.5.1
+      version: 3.12.4
     globals:
       specifier: ^16.1.0
-      version: 16.1.0
+      version: 16.4.0
     prettier:
       specifier: ^3.2.5
       version: 3.6.2
@@ -50,16 +50,16 @@ catalogs:
       version: 3.4.0
     publint:
       specifier: ^0.2.7
-      version: 0.2.7
+      version: 0.3.14
     rimraf:
       specifier: ^6.0.1
       version: 6.0.1
     svelte:
       specifier: 5.26.2
-      version: 5.26.2
+      version: 5.39.9
     svelte-check:
       specifier: ^4.3.1
-      version: 4.3.1
+      version: 4.3.2
     svelte-tweakpane-ui:
       specifier: ^1.5.9
       version: 1.5.9
@@ -80,7 +80,7 @@ catalogs:
       version: 5.9.2
     typescript-eslint:
       specifier: ^8.32.0
-      version: 8.32.0
+      version: 8.46.0
     vitest:
       specifier: ^3.2.4
       version: 3.2.4
@@ -1003,6 +1003,9 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: 'catalog:'
         version: 6.2.1(svelte@5.39.9)(vite@7.1.4(@types/node@22.18.0)(jiti@2.5.1)(lightningcss@1.30.1)(sass@1.77.7)(terser@5.37.0)(tsx@4.20.5)(yaml@2.7.1))
+      '@threlte/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 'catalog:'
         version: 22.18.0
