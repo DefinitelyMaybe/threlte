@@ -11,8 +11,7 @@
     createRenderer={(canvas) => {
       return new WebGPURenderer({
         canvas,
-        antialias: true,
-        forceWebGL: false
+        antialias: true
       })
     }}
   >

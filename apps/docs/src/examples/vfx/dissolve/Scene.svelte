@@ -1,7 +1,14 @@
 <script>
-  import { T, useTask } from '@threlte/core'
+  import { T, useTask, useThrelte } from '@threlte/core'
   import { interactivity } from '@threlte/extras'
-  import { dissolveOpacityNode } from '@threlte/vfx'
+  import {
+    dissolveOpacityNode,
+    wavesPositionNode,
+    wavesNormalNode,
+    wavesEmissiveNode,
+    Waves
+  } from '@threlte/vfx'
+  import { Button, Pane } from 'svelte-tweakpane-ui'
   import { Spring } from 'svelte/motion'
 
   interactivity()
@@ -16,7 +23,7 @@
 
 <T.PerspectiveCamera
   makeDefault
-  position={[10, 10, 10]}
+  position={[5, 5, 5]}
   oncreate={(ref) => {
     ref.lookAt(0, 1, 0)
   }}
@@ -27,7 +34,7 @@
   castShadow
 />
 
-<T.Mesh
+<!-- <T.Mesh
   rotation.y={rotation}
   position.y={1}
   scale={scale.current}
@@ -45,12 +52,21 @@
     opacityNode={dissolveOpacityNode}
     transparent
   />
-</T.Mesh>
+</T.Mesh> -->
 
 <T.Mesh
   rotation.x={-Math.PI / 2}
   receiveShadow
 >
-  <T.CircleGeometry args={[4, 40]} />
-  <T.MeshStandardMaterial color="white" />
+  <T.PlaneGeometry args={[2, 2, 256, 256]} />
+  <Waves />
 </T.Mesh>
+
+<Pane position="fixed">
+  <Button
+    on:click={() => {
+      console.log(renderer)
+      console.log(renderer.info)
+    }}>test</Button
+  >
+</Pane>
