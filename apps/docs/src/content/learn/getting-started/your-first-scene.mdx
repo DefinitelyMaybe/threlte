@@ -1,6 +1,7 @@
 ---
 category: Getting Started
 title: Your First Scene
+order: 2
 ---
 
 <Tip type="info">
@@ -44,7 +45,7 @@ a [`THREE.MeshBasicMaterial`](https://threejs.org/docs/index.html#api/en/materia
 
 We should now be looking at a white cube on a transparent background.
 
-```svelte title="Scene.svelte" {1-8}+
+```svelte title="Scene.svelte" ins={1-8}
 <script>
   import { T } from '@threlte/core'
 </script>
@@ -61,10 +62,9 @@ We should now be looking at a white cube on a transparent background.
 />
 
 <Tip type="info" title="attach">
-
-Behind the scenes we're using the property `attach` available on `<T>` to **attach an object to a property of
-its parent**. Binding geometries to the property `geometry` and materials to the property `material` is a common
-pattern so Threlte takes care of it for you.
+	Behind the scenes we're using the property `attach` available on `<T>` to **attach an object to a property of
+	its parent**. Binding geometries to the property `geometry` and materials to the property `material` is a common
+	pattern so Threlte takes care of it for you.
 
   <details>
 	<summary>
@@ -117,7 +117,7 @@ mesh.material = material
 That cube is still a bit boring. Let's add some color to it, and make it a bit bigger! We also want to move it up a little to highlight it. We can do this by passing props to the
 `<T>` component.
 
-```svelte title="Scene.svelte" {5-7}m
+```svelte title="Scene.svelte" mark={5-7}
 <script>
   import { T } from '@threlte/core'
 </script>

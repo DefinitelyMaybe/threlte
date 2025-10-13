@@ -22,19 +22,22 @@ if (!codeEl || !isHTMLElement(codeEl)) {
 
 const props: Record<string, any> = {}
 
-const codeComponentProps = ['title', 'class'] as const
+const codeComponentProps = ['title', 'class', 'mark', 'ins', 'del'] as const
 
 const propFormatters: Partial<
   Record<(typeof codeComponentProps)[number] & string, (value: string) => string>
 > = {
   // "title of file" => title of file
   title: (value) => value.replace(/['"]+/g, ''),
-  class: (value) => value.replace(/['"]+/g, '')
+  class: (value) => value.replace(/['"]+/g, ''),
+  mark: (value) => value.replace(/[\{\}]+/g, ''),
+  ins: (value) => value.replace(/[\{\}]+/g, ''),
+  del: (value) => value.replace(/[\{\}]+/g, '')
 }
 
 const language = (codeEl.attributes as any).class?.split(' ')[0].replace('language-', '')
 const metastring = (codeEl.attributes as any).metastring as string | undefined
-
+console.log(metastring)
 const lineOptions: TransformerCompactLineOption[] = []
 
 if (metastring) {
@@ -114,11 +117,11 @@ if (metastring) {
     }
   }
 }
+console.log(props)
 ---
 
 <Code
   code={codeEl.text}
   lang={language}
-  {lineOptions}
   {...props}
 />

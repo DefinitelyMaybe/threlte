@@ -93,6 +93,58 @@ https://tailwindcss.com/docs/detecting-classes-in-source-files#dynamic-class-nam
   --docs-navbar-height: 70px;
 }
 
+/* ======= Code Blocks ========================== */
+
+.expressive-code {
+  margin-bottom: calc(var(--spacing, 0.25rem) * 6);
+}
+
+.expressive-code .frame pre {
+  border-radius: var(--radius-md, 0.375rem);
+  background-color: var(--color-blue-900, oklch(0.2006 0.0326 262.35));
+}
+
+.expressive-code .frame.has-title pre {
+  border-top: solid rgb(255 255 255 / 0.2);
+  border-top-left-radius: 0rem;
+}
+
+.expressive-code pre {
+  @apply !border !border-t !border-white/20 bg-blue-900;
+}
+
+.expressive-code .frame.has-title pre,
+.expressive-code .frame.is-terminal pre {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+
+.expressive-code .frame.has-title:not(.is-terminal) .title::after {
+  --tw-border-style: none;
+  border-style: none;
+}
+
+.expressive-code .frame.has-title:not(.is-terminal) .header {
+  @apply rounded-t-md !border-none !bg-none;
+}
+
+.expressive-code .frame.has-title:not(.is-terminal) .header .title {
+  @apply bg-blue-900 text-white/60;
+}
+
+.expressive-code .frame.has-title:not(.is-terminal) .title {
+  @apply !rounded-t-md !border !border-white/20;
+}
+
+.expressive-code .frame.has-title:not(.is-terminal) .header::before {
+  --tw-border-style: none;
+  border-style: none;
+}
+
+.expressive-code > .frame > pre > code div > div {
+  margin: 0px;
+}
+
 /* ======= Scrollbar ========================== */
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
