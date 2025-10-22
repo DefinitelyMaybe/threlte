@@ -1,24 +1,10 @@
 <script>
-  import { T, useTask, useThrelte } from '@threlte/core'
-  import { interactivity } from '@threlte/extras'
-  import {
-    dissolveOpacityNode,
-    wavesPositionNode,
-    wavesNormalNode,
-    wavesEmissiveNode,
-    Waves
-  } from '@threlte/vfx'
+  import { T } from '@threlte/core'
+  import { CameraControls } from '@threlte/extras'
+  import { Dissolve } from '@threlte/vfx'
   import { Button, Pane } from 'svelte-tweakpane-ui'
-  import { Spring } from 'svelte/motion'
-
-  interactivity()
-
-  const scale = new Spring(1)
-
-  let rotation = $state(0)
-  useTask((delta) => {
-    rotation += delta
-  })
+  import { Tween } from 'svelte/motion'
+  const x = new Tween(0, { duration: 1000 })
 </script>
 
 <T.PerspectiveCamera
@@ -27,46 +13,44 @@
   oncreate={(ref) => {
     ref.lookAt(0, 1, 0)
   }}
-/>
+>
+  <CameraControls />
+</T.PerspectiveCamera>
 
 <T.DirectionalLight
   position={[0, 10, 10]}
   castShadow
 />
 
-<!-- <T.Mesh
-  rotation.y={rotation}
+<T.Mesh
   position.y={1}
-  scale={scale.current}
-  onpointerenter={() => {
-    scale.target = 1.5
-  }}
-  onpointerleave={() => {
-    scale.target = 1
-  }}
   castShadow
 >
   <T.BoxGeometry args={[1, 2, 1]} />
-  <T.MeshStandardNodeMaterial
+  <Dissolve
+    bind:t={x.current}
     color="hotpink"
-    opacityNode={dissolveOpacityNode}
-    transparent
+    multiplier={5}
   />
-</T.Mesh> -->
+</T.Mesh>
 
 <T.Mesh
   rotation.x={-Math.PI / 2}
   receiveShadow
 >
-  <T.PlaneGeometry args={[2, 2, 256, 256]} />
-  <Waves />
+  <T.CircleGeometry args={[3]} />
+  <T.MeshStandardNodeMaterial />
 </T.Mesh>
 
 <Pane position="fixed">
   <Button
+    title="Dissolve"
     on:click={() => {
-      console.log(renderer)
-      console.log(renderer.info)
-    }}>test</Button
-  >
+      if (x.current == 0) {
+        x.target = 1
+      } else {
+        x.target = 0
+      }
+    }}
+  ></Button>
 </Pane>

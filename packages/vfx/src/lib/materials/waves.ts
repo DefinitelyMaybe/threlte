@@ -68,7 +68,7 @@ export class WavesMaterial extends MeshStandardNodeMaterial {
 		const elevation = wavesElevation(positionLocal);
 		const position = positionLocal.add(vec3(0, elevation, 0));
 
-		material.positionNode = position;
+		this.positionNode = position;
 
 		// normals
 
@@ -82,11 +82,11 @@ export class WavesMaterial extends MeshStandardNodeMaterial {
 		const toB = positionB.sub(position).normalize();
 		const normal = toA.cross(toB);
 
-		material.normalNode = transformNormalToView(normal);
+		this.normalNode = transformNormalToView(normal);
 
 		// emissive
 
 		const emissive = elevation.remap(emissiveHigh, emissiveLow).pow(emissivePower);
-		material.emissiveNode = emissiveColor.mul(emissive);
+		this.emissiveNode = emissiveColor.mul(emissive);
 	}
 }
