@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { T, useTask, useThrelte } from '@threlte/core';
+	import { T, useTask } from '@threlte/core';
 	import { mx_noise_float, uniform, step, uv } from 'three/tsl';
 
 	interface DissolveProps {
@@ -16,7 +16,6 @@
 		pivot = 0.5,
 		...rest
 	}: DissolveProps = $props();
-	const { invalidate } = useThrelte();
 
 	const noiseValue = mx_noise_float(uv().mul(multiplier), amplitude, pivot);
 	const threshold = uniform(t);
@@ -25,14 +24,13 @@
 
 	const { start, stop, started } = useTask(() => {
 		threshold.value = t;
+		if (t === 0 || t === 1) {
+			stop();
+		}
 	});
 
 	$effect(() => {
-		if (t === 0 || t === 1) {
-			threshold.value = t;
-			invalidate();
-			stop();
-		} else if (!$started) {
+		if (!$started && !(t === 0 || t === 1)) {
 			start();
 		}
 	});
