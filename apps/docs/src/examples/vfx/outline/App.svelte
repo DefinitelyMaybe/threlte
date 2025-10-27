@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CustomRenderer from './PostProcessing.svelte'
+  import PostProcessing from './PostProcessing.svelte'
   import Scene from './Scene.svelte'
   import { Canvas, extend } from '@threlte/core'
   import { WebGPURenderer } from 'three/webgpu'
@@ -16,5 +16,5 @@
   }}
 >
   <Scene />
-  <CustomRenderer />
+  <PostProcessing />
 </Canvas>
