@@ -1,8 +1,10 @@
 <script lang="ts">
-  import type { Object3D } from 'three'
-  import { CameraControls, interactivity, type IntersectionEvent } from '@threlte/extras'
-  import { T } from '@threlte/core'
+  import { type Object3D } from 'three'
+  import { CameraControls, HTML, interactivity, type IntersectionEvent } from '@threlte/extras'
+  import { T, useThrelte } from '@threlte/core'
   import { state } from './state.svelte'
+
+  const { invalidate } = useThrelte()
 
   interactivity()
 </script>
@@ -18,12 +20,23 @@
 <T.AmbientLight />
 
 <T.Mesh
-  onclick={(ref: IntersectionEvent<Object3D>) => {
+  onpointerenter={(ref: IntersectionEvent<Object3D>) => {
     state.selectedObjects = [ref.object]
+    invalidate()
+  }}
+  onpointerleave={() => {
+    state.selectedObjects = []
+    invalidate()
   }}
 >
   <T.MeshStandardMaterial color="gold" />
   <T.BoxGeometry />
+  <HTML
+    transform
+    position.y={1}
+  >
+    <div class="rounded-full bg-orange-500 px-3 text-white hover:opacity-90">v Hover over v</div>
+  </HTML>
 </T.Mesh>
 
 <T.Mesh
@@ -33,4 +46,12 @@
 >
   <T.PlaneGeometry />
   <T.MeshStandardMaterial color="green" />
+</T.Mesh>
+
+<T.Mesh
+  scale={2}
+  position={[3, 0.5, 3]}
+>
+  <T.BoxGeometry />
+  <T.MeshStandardMaterial color="red" />
 </T.Mesh>
