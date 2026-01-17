@@ -252,4 +252,7 @@ export default defineConfig({
   build: {
     concurrency: 4
   }
+  // redirects: {
+  //   '/docs/reference/[...slug]': '/reference/[...slug]'
+  // }
 })
