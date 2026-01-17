@@ -10,6 +10,7 @@ import tailwindcss from '@tailwindcss/vite'
 import svelte from '@astrojs/svelte'
 import mdx from '@astrojs/mdx'
 import starlight from '@astrojs/starlight'
+import starlightLinksValidator from 'starlight-links-validator'
 import starlightSidebarTopics from 'starlight-sidebar-topics'
 import { cpus } from 'os'
 
@@ -187,7 +188,8 @@ export default defineConfig({
             link: '/reference/gltf/getting-started',
             items: [{ label: 'Getting Started', link: '/reference/gltf/getting-started' }]
           }
-        ])
+        ]),
+        starlightLinksValidator()
       ],
       head: [
         {

@@ -30,6 +30,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.5",
     "gl-noise": "^1.6.1",
+    "starlight-links-validator": "^0.19.2",
     "starlight-sidebar-topics": "^0.6.1",
     "three-custom-shader-material": "^6.3.7",
     "typescript": "catalog:"
