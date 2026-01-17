@@ -200,7 +200,14 @@ export default defineConfig({
           tag: 'link',
           attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true }
         }
-      ]
+      ],
+      locales: {
+        root: {
+          label: 'English',
+          lang: 'en' // lang is required for root locales
+        }
+        // to add more languages later follow: https://starlight.astro.build/guides/i18n/#use-a-root-locale
+      }
     }),
     mdx()
     // {rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]}
