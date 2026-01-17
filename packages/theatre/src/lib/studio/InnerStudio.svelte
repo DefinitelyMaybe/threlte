@@ -3,7 +3,7 @@
   module
 >
   import Studio from '@theatre/studio'
-  import { studio } from '../consts'
+  import { studio } from '../consts.js'
 
   Studio.initialize()
   studio.set(Studio)

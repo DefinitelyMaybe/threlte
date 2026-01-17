@@ -37,6 +37,14 @@ catalogs:
 overrides:
   vite: ^7.1.4
 
+patchedDependencies:
+  '@theatre/studio':
+    hash: 1be11589f12d362f0a72e118ac4ef7b2c48bbd564289a80be63f7f5ac6f4e07f
+    path: patches/@theatre__studio.patch
+  mitt:
+    hash: 325af173b7ab05fc16e066f43bc80a68f7fd58ddbfc1d0df37f773af1c79bb42
+    path: patches/mitt.patch
+
 importers:
 
   .:
@@ -146,7 +154,7 @@ importers:
         version: 0.6.2
       '@theatre/studio':
         specifier: ^0.6.2
-        version: 0.6.2(@theatre/core@0.6.2)
+        version: 0.6.2(patch_hash=1be11589f12d362f0a72e118ac4ef7b2c48bbd564289a80be63f7f5ac6f4e07f)(@theatre/core@0.6.2)
       '@threlte/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -260,7 +268,7 @@ importers:
     dependencies:
       mitt:
         specifier: ^3.0.1
-        version: 3.0.1
+        version: 3.0.1(patch_hash=325af173b7ab05fc16e066f43bc80a68f7fd58ddbfc1d0df37f773af1c79bb42)
     devDependencies:
       '@eslint/js':
         specifier: 'catalog:'
@@ -353,8 +361,8 @@ importers:
         specifier: ^2.5.1
         version: 2.5.1(@types/three@0.175.0)(three@0.175.0)
       camera-controls:
-        specifier: ^2.10.1
-        version: 2.10.1(three@0.175.0)
+        specifier: ^3.1.2
+        version: 3.1.2(three@0.175.0)
       three-mesh-bvh:
         specifier: ^0.9.1
         version: 0.9.1(three@0.175.0)
@@ -448,7 +456,7 @@ importers:
     dependencies:
       mitt:
         specifier: ^3.0.1
-        version: 3.0.1
+        version: 3.0.1(patch_hash=325af173b7ab05fc16e066f43bc80a68f7fd58ddbfc1d0df37f773af1c79bb42)
       yoga-layout:
         specifier: ^3.2.1
         version: 3.2.1
@@ -692,8 +700,8 @@ importers:
         specifier: ^0.3.0
         version: 0.3.0(tweakpane@4.0.5)
       camera-controls:
-        specifier: ^2.10.1
-        version: 2.10.1(three@0.175.0)
+        specifier: ^3.1.2
+        version: 3.1.2(three@0.175.0)
       estree-walker:
         specifier: ^3.0.3
         version: 3.0.3
@@ -823,7 +831,7 @@ importers:
         version: 0.6.2
       '@theatre/studio':
         specifier: '>=0.6'
-        version: 0.6.2(@theatre/core@0.6.2)
+        version: 0.6.2(patch_hash=1be11589f12d362f0a72e118ac4ef7b2c48bbd564289a80be63f7f5ac6f4e07f)(@theatre/core@0.6.2)
     devDependencies:
       '@eslint/js':
         specifier: 'catalog:'
@@ -3079,8 +3087,9 @@ packages:
     resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
     engines: {node: '>=16'}
 
-  camera-controls@2.10.1:
-    resolution: {integrity: sha512-KnaKdcvkBJ1Irbrzl8XD6WtZltkRjp869Jx8c0ujs9K+9WD+1D7ryBsCiVqJYUqt6i/HR5FxT7RLASieUD+Q5w==}
+  camera-controls@3.1.2:
+    resolution: {integrity: sha512-xkxfpG2ECZ6Ww5/9+kf4mfg1VEYAoe9aDSY+IwF0UEs7qEzwy0aVRfs2grImIECs/PoBtWFrh7RXsQkwG922JA==}
+    engines: {node: '>=22.0.0', npm: '>=10.5.1'}
     peerDependencies:
       three: '>=0.126.1'
 
@@ -9308,7 +9317,7 @@ snapshots:
     dependencies:
       lodash-es: 4.17.21
 
-  '@theatre/studio@0.6.2(@theatre/core@0.6.2)':
+  '@theatre/studio@0.6.2(patch_hash=1be11589f12d362f0a72e118ac4ef7b2c48bbd564289a80be63f7f5ac6f4e07f)(@theatre/core@0.6.2)':
     dependencies:
       '@theatre/core': 0.6.2
       '@theatre/dataverse': 0.6.2
@@ -10233,7 +10242,7 @@ snapshots:
 
   camelcase@8.0.0: {}
 
-  camera-controls@2.10.1(three@0.175.0):
+  camera-controls@3.1.2(three@0.175.0):
     dependencies:
       three: 0.175.0
 
@@ -13075,7 +13084,7 @@ snapshots:
     dependencies:
       minipass: 7.1.2
 
-  mitt@3.0.1: {}
+  mitt@3.0.1(patch_hash=325af173b7ab05fc16e066f43bc80a68f7fd58ddbfc1d0df37f773af1c79bb42): {}
 
   mixme@0.5.4: {}
 

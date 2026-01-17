@@ -2,7 +2,7 @@ import { currentWritable, useTask, watch, type CurrentWritable } from '@threlte/
 import { tick } from 'svelte'
 import { derived, writable, type Writable } from 'svelte/store'
 import { AnimationMixer, type AnimationAction, type Object3D } from 'three'
-import type { ThrelteGltf } from '../types/types'
+import type { ThrelteGltf } from '../types/types.js'
 
 type UseGltfAnimationsReturnType<Actions> = {
   gltf: Writable<ThrelteGltf | undefined>
@@ -89,17 +89,12 @@ export function useGltfAnimations<
     }
   })
 
-  const { start, stop } = useTask(
+  useTask(
     (delta) => {
       mixer.update(delta)
     },
-    { autoStart: false }
+    { running: () => Object.keys(actions).length > 0 }
   )
-
-  watch(actions, (actions) => {
-    if (Object.keys(actions).length) start()
-    else stop()
-  })
 
   return {
     gltf,

@@ -1,5 +1,17 @@
 # @threlte/core
 
+## 8.3.1
+
+### Patch Changes
+
+- 0c6bc84: patch mitt and remove workarounds
+
+## 8.3.0
+
+### Minor Changes
+
+- ffc74ea: update "module" and "moduleResolution" to "NodeNext" and adjust all relative imports
+
 ## 8.2.1
 
 ### Patch Changes
