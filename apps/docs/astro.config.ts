@@ -258,8 +258,12 @@ export default defineConfig({
   },
   build: {
     concurrency: 4
+  },
+  redirects: {
+    // '/docs/reference/[...slug]': '/reference/[...slug]',
+    // '/reference/core/t': '/reference/core/components/t/',
+    // '/reference/core/canvas': '/reference/core/components/canvas/',
+    // '/reference/core/use-loader': '/reference/core/hooks/use-loader/',
+    // '/reference/core/utilities': '/reference/core/helpers/utilities/'
   }
-  // redirects: {
-  //   '/docs/reference/[...slug]': '/reference/[...slug]'
-  // }
 })
