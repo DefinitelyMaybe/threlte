@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/xr
 
-[@threlte/xr](https://threlte.xyz/docs/reference/xr/getting-started) provides a set of components and hooks that make it easy to create XR experiences.
+[@threlte/xr](https://threlte.xyz/reference/xr/getting-started) provides a set of components and hooks that make it easy to create XR experiences.
 
 ## Quickstart
 

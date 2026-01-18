@@ -23,7 +23,7 @@ export const createUseDimensionsContext = () => {
 /**
  * The hook `useDimensions` can be used to retrieve the computed width and
  * height of a `<Flex>` or `<Box>` component as
- * [CurrentWritable](https://threlte.xyz/docs/reference/core/utilities#currentwritable)
+ * [CurrentWritable](https://threlte.xyz/reference/core/helpers/utilities/#currentwritable)
  * stores.
  *
  * ## Usage

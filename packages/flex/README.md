@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/flex
 
-[@threlte/flex](https://threlte.xyz/docs/reference/flex/getting-started) makes placing 3D content based on flexbox principles a breeze.
+[@threlte/flex](https://threlte.xyz/reference/flex/getting-started) makes placing 3D content based on flexbox principles a breeze.
 
 ## Quickstart
 

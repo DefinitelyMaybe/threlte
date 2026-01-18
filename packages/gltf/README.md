@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/gltf
 
-[@threlte/gltf](https://threlte.xyz/docs/reference/gltf/getting-started) gives you a CLI to that turn GLTF assets into declarative and reusable Threlte components.
+[@threlte/gltf](https://threlte.xyz/reference/gltf/getting-started) gives you a CLI to that turn GLTF assets into declarative and reusable Threlte components.
 
 This helps with performance optimization for asset-heavy Threlte apps. It also allows you to modify your GLTF assets as Svelte components, instead of working with 3D software like Blender.
 

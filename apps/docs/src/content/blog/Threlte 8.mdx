@@ -29,30 +29,30 @@ possible before.
 
 - Props are now evaluated individually
 - [`attach` got a lot more
-  powerful](/learn/advanced/migration-guides#attach-api--trait-components)
+  powerful](/learn/advanced/migration-guides/#attach-api--trait-components)
 - [Automatic disposal is more
-  transparent](docs/learn/advanced/migration-guides#automatic-disposal) and
-- [Events have been algined with svelte 5](/learn/advanced/migration-guides#events)
+  transparent](/learn/advanced/migration-guides/#automatic-disposal) and
+- [Events have been algined with svelte 5](/learn/advanced/migration-guides/#events)
 
 ### New `@threlte/extras` components
 
 We've added a lot of new things to play around with in `@threlte/extras` including:
-[`<AsciiRenderer>`](/reference/extras/ascii-renderer),
-[`<CubeCamera>`](/reference/extras/cube-camera),
-[`<MeshDiscardMaterial>`](/reference/extras/discard-material),
-[`<RadialGradientTexture>`](/reference/extras/radial-gradient-texture),
-[`<LinearGradientTexture>`](/reference/extras/linear-gradient-texture),
-[`useViewport`](/reference/extras/use-viewport),
-[`<HUD>`](/reference/extras/hud),
-[`<Resize>`](/reference/extras/resize),
-[`<meshBounds>`](/reference/extras/mesh-bounds),
-[`<Detailed>`](/reference/extras/detailed) and
-[`<View>`](/reference/extras/view).
+[`<AsciiRenderer>`](/reference/extras/visual-effects/ascii-renderer/),
+[`<CubeCamera>`](/reference/extras/visual-effects/cube-camera),
+[`<MeshDiscardMaterial>`](/reference/extras/visual-effects/discard-material),
+[`<RadialGradientTexture>`](/reference/extras/visual-effects/radial-gradient-texture),
+[`<LinearGradientTexture>`](/reference/extras/visual-effects/linear-gradient-texture),
+[`useViewport`](/reference/extras/staging/use-viewport),
+[`<HUD>`](/reference/extras/staging/hud),
+[`<Resize>`](/reference/extras/staging/resize),
+[`<meshBounds>`](/reference/extras/performance/mesh-bounds),
+[`<Detailed>`](/reference/extras/performance/detailed) and
+[`<View>`](/reference/extras/staging/view).
 
 ### Custom type support for `<T>`
 
 Plugins such as
-[`interactivity`](/reference/extras/interactivity#prop-types) now expose
+[`interactivity`](/reference/extras/interaction/interactivity/#prop-types) now expose
 types which can be added to your ambient type definitions for the `<T>`
 component to pick up. Event handlers and custom `<T>` component objects are now
 type-safe.
@@ -60,13 +60,13 @@ type-safe.
 ### Fixed frame physics
 
 `@threlte/rapier` now supports [fixed frame
-physics](/reference/rapier/framerate) letting you craft simulations with
+physics](/reference/rapier/concepts/framerate/) letting you craft simulations with
 predictability and consistency.
 
 ### Threlte plugin API
 
 The **Plugin API** got an update to [fully embrace Svelte 5's reactivity
-model](/learn/advanced/migration-guides#plugin-api). The doc page also
+model](/learn/advanced/migration-guides/#plugin-api). The doc page also
 had an update to better introduce the API's capabilities.
 
 ### This is the _WebGPU_ way
@@ -90,7 +90,7 @@ where you want them 🚀😀
 
 There are breaking changes. Threlte 8 is not backward-compatible but we've
 tried our best to cover the details within our [migration
-guide](/learn/advanced/migration-guides#threlte-8). For further help,
+guide](/learn/advanced/migration-guides/#threlte-8). For further help,
 reach out to us on discord.
 
 ## Built with the community, for the community

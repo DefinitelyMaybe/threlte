@@ -4,9 +4,9 @@ order: -750
 ---
 
 Threlte works seamlessly with Three.js loaders, and provides a hook,
-[useLoader](/docs/reference/core/use-loader), to help solve common loading issues.
+[useLoader](/reference/core/hooks/use-loader/), to help solve common loading issues.
 It caches results to prevent duplicate fetch/parse work and returns an async store,
-[asyncWritable](/docs/reference/core/utilities#asyncwritable) for convenient usage in Svelte.
+[asyncWritable](/reference/core/helpers/utilities/#asyncwritable) for convenient usage in Svelte.
 
 Caching cuts network requests, bandwidth, and memory, improving app performance.
 
@@ -38,13 +38,13 @@ for the web. You can use Three.js' `GLTFLoader` to load a `.gltf` model.
 {/if}
 ```
 
-The [`<GLTF/>`](/reference/extras/gltf) component is roughly equivalent to
+The [`<GLTF/>`](/reference/extras/content/gltf/) component is roughly equivalent to
 the example above.
 
 ### `useGltf` hook
 
 `@threlte/extras` provides a handy hook for loading `.gltf` models called
-[useGltf](/reference/extras/use-gltf):
+[useGltf](/reference/extras/content/use-gltf/):
 
 ```svelte
 <script>
@@ -75,7 +75,7 @@ import and reuse it as much as you'd like.
 
 Three.js uses [AnimationMixer](https://threejs.org/docs/index.html#api/en/animation/AnimationMixer)
 to drive animations. Threlte provides a convenient
-[useGltfAnimations](/reference/extras/use-gltf-animations) hook for gltfs.
+[useGltfAnimations](/reference/extras/content/use-gltf-animations/) hook for gltfs.
 See the animation [Three.js example](https://threejs.org/examples/?q=animation)
 for how to setup a model for your animation needs.
 

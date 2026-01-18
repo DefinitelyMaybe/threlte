@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/core
 
-[@threlte/core](https://threlte.xyz/docs/reference/core/getting-started) provides declarative and transparent Svelte binding to [Three.js](https://threejs.org/).
+[@threlte/core](https://threlte.xyz/reference/core/getting-started) provides declarative and transparent Svelte binding to [Three.js](https://threejs.org/).
 
 This package is the heart of the Threlte library. It's an excellent starting point for those learning Threlte for the first time.
 
@@ -47,7 +47,7 @@ Have questions? Feel free to ask in our [Discord support forum](https://discord.
 
 ## Features
 
- - [Clean API](https://threlte.xyz/docs/reference/core/t) transparently exposing *all* Three.js objects through declarative API.
+ - [Clean API](https://threlte.xyz/reference/core/components/t/) transparently exposing *all* Three.js objects through declarative API.
 
  - [Hooks](https://threlte.xyz/docs/learn/basics/hooks) providing easy access to low-level contexts like animation frames and the rendering engine.
 
@@ -55,7 +55,7 @@ Have questions? Feel free to ask in our [Discord support forum](https://discord.
 
  - [Events](https://threlte.xyz/docs/learn/basics/events) enabling robust and Svelte-native access to state transformations in your scenes.
 
- - [Interactivity](https://threlte.xyz/docs/reference/extras/interactivity) makes it easy to react to user inputs on 3D objects.
+ - [Interactivity](https://threlte.xyz/reference/extras/interaction/interactivity) makes it easy to react to user inputs on 3D objects.
 
 ## Contributing
 

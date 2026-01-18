@@ -38,7 +38,7 @@ Have questions? Feel free to ask in our [Discord support forum](https://discord.
 
 ## Features
 
- - [Clean API](https://threlte.xyz/docs/reference/core/t) transparently exposing *all* Three.js objects through declarative API.
+ - [Clean API](https://threlte.xyz/reference/core/components/t/) transparently exposing *all* Three.js objects through declarative API.
 
  - [Hooks](https://threlte.xyz/docs/learn/basics/hooks) providing easy access to low-level contexts like animation frames and the rendering engine.
 
@@ -46,22 +46,22 @@ Have questions? Feel free to ask in our [Discord support forum](https://discord.
 
  - [Events](https://threlte.xyz/docs/learn/basics/events) enabling robust and Svelte-native access to state transformations in your scenes.
 
- - [Interactivity](https://threlte.xyz/docs/reference/extras/interactivity) makes it easy to react to user inputs on 3D objects.
+ - [Interactivity](https://threlte.xyz/reference/extras/interaction/interactivity) makes it easy to react to user inputs on 3D objects.
 
 
 ## Packages
 
 Threlte is comprised of six distinct packages to allow you to import only what you need:
 
-- [@threlte/core](https://threlte.xyz/docs/reference/core/getting-started) provides declarative and transparent Svelte binding to [Three.js](https://threejs.org/).
+- [@threlte/core](https://threlte.xyz/reference/core/getting-started) provides declarative and transparent Svelte binding to [Three.js](https://threejs.org/).
 
-- [@threlte/extras](https://threlte.xyz/docs/reference/extras/getting-started) boosts productivity with assorted enhancements that extend Threlte's functionality.
+- [@threlte/extras](https://threlte.xyz/reference/extras/getting-started) boosts productivity with assorted enhancements that extend Threlte's functionality.
 
-- [@threlte/gltf](https://threlte.xyz/docs/reference/gltf/getting-started) gives you a CLI to that turn GLTF assets into declarative and reusable Threlte components.
+- [@threlte/gltf](https://threlte.xyz/reference/gltf/getting-started) gives you a CLI to that turn GLTF assets into declarative and reusable Threlte components.
 
-- [@threlte/rapier](https://threlte.xyz/docs/reference/rapier/getting-started) enables performant physics in your Threlte app through the [Rapier engine](https://rapier.rs/)
+- [@threlte/rapier](https://threlte.xyz/reference/rapier/getting-started) enables performant physics in your Threlte app through the [Rapier engine](https://rapier.rs/)
 
-- [@threlte/theatre](https://threlte.xyz/docs/reference/theatre/getting-started) lets you animate in your Threlte app through the [Theatre.js studio](https://www.theatrejs.com/)
+- [@threlte/theatre](https://threlte.xyz/reference/theatre/getting-started) lets you animate in your Threlte app through the [Theatre.js studio](https://www.theatrejs.com/)
 
 - [@threlte/xr](https://github.com/threlte/threlte/tree/main/packages/xr)** - components and hooks for VR and AR environments
 

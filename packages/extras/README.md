@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/extras
 
-[@threlte/extras](https://threlte.xyz/docs/reference/extras/getting-started) boosts productivity with assorted enhancements that extend Threlte's functionality.
+[@threlte/extras](https://threlte.xyz/reference/extras/getting-started) boosts productivity with assorted enhancements that extend Threlte's functionality.
 
 This provides assorted components, hooks and plugins that address common usecases for Threlte applications. Many are ports of code from battle-tested, well established Three.js libraries.
 

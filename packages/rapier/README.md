@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/rapier
 
-[@threlte/rapier](https://threlte.xyz/docs/reference/rapier/getting-started) enables performant physics in your Threlte app through the [Rapier engine](https://rapier.rs/).
+[@threlte/rapier](https://threlte.xyz/reference/rapier/getting-started) enables performant physics in your Threlte app through the [Rapier engine](https://rapier.rs/).
 
 This is a great way to implement key features of games or simulators, such as collisions, gravity and attraction fields.
 

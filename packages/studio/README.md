@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/studio
 
-[@threlte/studio](https://threlte.xyz/docs/reference/studio/getting-started) is a visual editor for Threlte projects. It allows you to edit scenes and configure entities and extend your workflow.
+[@threlte/studio](https://threlte.xyz/reference/studio/getting-started) is a visual editor for Threlte projects. It allows you to edit scenes and configure entities and extend your workflow.
 
 ## Quickstart
 

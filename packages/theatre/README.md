@@ -27,7 +27,7 @@ Check out our **[documentation](https://threlte.xyz)** and our **[Discord commun
 
 ## @threlte/theatre
 
-[@threlte/theatre](https://threlte.xyz/docs/reference/theatre/getting-started) lets you animate in your Threlte app through the [Theatre.js studio](https://www.theatrejs.com/)
+[@threlte/theatre](https://threlte.xyz/reference/theatre/getting-started) lets you animate in your Threlte app through the [Theatre.js studio](https://www.theatrejs.com/)
 
 The package allows you to use an interactive GUI in the browser during development and visually configure your animations. It supports both Three.js and HTML DOM animations.
 

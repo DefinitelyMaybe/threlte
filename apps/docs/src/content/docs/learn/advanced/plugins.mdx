@@ -13,7 +13,7 @@ is injected into every child `<T>` component.
 Plugins can be overridden in child components.
 
 The [interactivity plugin in
-`@threlte/extras`](/reference/extras/interactivity) is an example of what a
+`@threlte/extras`](/reference/extras/interaction/interactivity) is an example of what a
 plugins can do and there are a couple of other examples below.
 
 ## When to use a plugin
@@ -185,7 +185,7 @@ This is en example implementation that adds the property `lookAt` to all `<T>` c
 
 A Plugin that implements [BVH raycasting](https://github.com/gkjohnson/three-mesh-bvh) on all child meshes and geometries.
 
-This plugin outlines the basic setup of the extras [bvh plugin](/reference/extras/bvh).
+This plugin outlines the basic setup of the extras [bvh plugin](/reference/extras/interaction/bvh/).
 
 ```ts title="bvhRaycasting.svelte.ts"
 import { injectPlugin, isInstanceOf } from '@threlte/core'
