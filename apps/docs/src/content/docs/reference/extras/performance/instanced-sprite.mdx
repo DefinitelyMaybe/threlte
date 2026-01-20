@@ -81,14 +81,14 @@ The `<InstancedSprite>` component allows you to efficiently spawn large numbers 
 [sprites](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>) in your scene and update each instance
 using the `useInstancedSprite` hook, or with a `<Instance>` component available through a slot prop.
 
-You can find an example of a [more complex scene here](/examples/animation/complex-sprite-scene).
+You can find an example of a [more complex scene here](/examples/content/complex-sprite-scene/).
 
 <Example path="extras/instanced-sprite" />
 
 ## `<InstancedSprite>`
 
 To use the `<InstancedSprite>` you must provide it with sprite metadata and a texture. While we recommend utilizing the
-[`buildSpritesheet()`](#buildSpritesheet) utility for this purpose, you are also free to implement your own
+[`buildSpritesheet()`](#buildspritesheet) utility for this purpose, you are also free to implement your own
 custom solution, provided it meets the component's input requirements.
 
 Other than it's own props, `<InstanedSprite/>` extends and accepts all properties of
@@ -187,7 +187,7 @@ const { updatePosition, count, animationMap, sprite } = useInstancedSprite<Anima
 Instance is a slot prop component that is used to update sprite instances properties. You can gain access to it with the `Instance` snippet prop on `InstancedSprite` component.
 Then put it as a child component. The only required property is `id`. It also has `position` of type `Vector3Tuple` prop and `scale` of type `Vector2Tuple`.
 
-Other than this, it as other properties that you can find in the `InstancedSpriteMesh`, so: `animationName`, `playmode`, `billboarding`, `offset`, `loop`,
+Other than this, it has other properties that you can find in the `InstancedSpriteMesh`, so: `animationName`, `playmode`, `billboarding`, `offset`, `loop`,
 `flipX`, `flipY`, `frameId`. Read more about them in the [InstancedSpriteMesh](#instancedspritemesh) section
 
 The `<Instance>` component serves as a declarative alternative to `useInstancedSprite` hook to dynamically update the properties of sprite instances within the

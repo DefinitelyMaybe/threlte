@@ -7,7 +7,7 @@ when the concepts of up and down are less important than the ability to
 carefully inspect a model from every angle.
 
 For an alternative camera controller, see
-[`<OrbitControls>`](https://threlte.xyz/reference/extras/orbit-controls).
+[`<OrbitControls>`](https://threlte.xyz/reference/extras/interaction/orbit-controls/).
 
 The component `<TrackballControls>` must be a direct child of a camera
 component and will mount itself to that camera. By default, damping is

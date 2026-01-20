@@ -44,7 +44,7 @@ Have questions? Feel free to ask in our [Discord support forum](https://discord.
 
  - [Plugins](https://threlte.xyz/docs/learn/advanced/plugins) making it easy to extend Threlte with custom code and logic.
 
- - [Events](https://threlte.xyz/docs/learn/basics/events) enabling robust and Svelte-native access to state transformations in your scenes.
+ - [Events](https://threlte.xyz//learn/basics/handling-events/) enabling robust and Svelte-native access to state transformations in your scenes.
 
  - [Interactivity](https://threlte.xyz/reference/extras/interaction/interactivity) makes it easy to react to user inputs on 3D objects.
 

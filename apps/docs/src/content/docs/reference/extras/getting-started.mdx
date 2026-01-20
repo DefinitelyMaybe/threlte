@@ -23,7 +23,7 @@ npm install @threlte/extras
 
 Most components are [**abstractions**](/learn/advanced/custom-abstractions) of one or more `<T>` components and forward all props and event listeners to it.
 
-Let's look at an example, the [`<OrbitControls>`](/reference/extras/orbit-controls). They are a common component in Three.js applications and can be used to easily manipulate the camera. Let's implement it:
+Let's look at an example, the [`<OrbitControls>`](/reference/extras/interaction/orbit-controls/). They are a common component in Three.js applications and can be used to easily manipulate the camera. Let's implement it:
 
 ```svelte title="Scene.svelte" {10}+
 <script>
@@ -106,13 +106,13 @@ extend our example from above and implement `interactivity`:
 
 Now, when we click on the box, we will see a message in the console. The `interactivity` plugin
 registers a global event listener on the `<canvas>` element and forwards all events to the
-respective `<T>` components. Check out the [guide on events](/learn/basics/events) for more
+respective `<T>` components. Check out the [guide on events](/learn/basics/handling-events/) for more
 information on how to use events in Threlte.
 
 <Tip type="tip">
   Plugins are injected via context and therefore need to be implement at the root of your
   application, this is typically your `Scene.svelte` component. Check out our [recommended app
-  structure](/learn/basics/context).
+  structure](/learn/basics/app-structure/).
 </Tip>
 
 ### Hooks
