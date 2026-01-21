@@ -7,7 +7,7 @@
   import CustomRendering from './Renderer.svelte'
 
   $effect(() => {
-    const intervalHandler = window.setInterval(() => {
+    const intervalHandler = setInterval(() => {
       game.blinkClock = game.blinkClock === 0 ? 1 : 0
     }, 96)
     return () => clearInterval(intervalHandler)
