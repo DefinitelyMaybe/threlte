@@ -4,7 +4,7 @@ import { flexContextName, type FlexContext } from '../Flex/context.js'
 /**
  * The hook useReflow allows you to manually request a [layout
  * reflow](https://threlte.xyz/reference/flex/flex#layout-reflow), for
- * instance when a [`<Text>`](https://threlte.xyz/reference/extras/text)
+ * instance when a [`<Text>`](https://threlte.xyz/reference/extras/content/text/)
  * component finished synchronizing or when a model has loaded into view and
  * there’s no easy access to the reflow slot prop of the components `<Flex>` or
  * `<Box>` because of component composition. Calls to`reflow` will be limited to
