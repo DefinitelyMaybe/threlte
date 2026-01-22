@@ -4,11 +4,6 @@ category: '@threlte/extras'
 title: '<Billboard>'
 sourcePath: 'packages/extras/src/lib/components/Billboard/Billboard.svelte'
 type: 'component'
-componentSignature:
-  {
-    extends: { type: 'Group', url: 'https://threejs.org/docs/index.html#api/en/objects/Group' },
-    props: [{ name: 'follow', type: 'boolean | THREE.Object3D', default: 'true', required: false }]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -39,3 +34,12 @@ to always face the camera or specified object.
 
 To disable the billboard from rotating its contents to face the camera, you can
 optionally pass in a `follow` prop set to `false`.
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: { type: 'Group', url: 'https://threejs.org/docs/index.html#api/en/objects/Group' },
+    props: [{ name: 'follow', type: 'boolean | THREE.Object3D', default: 'true', required: false }]
+  }}
+/>
