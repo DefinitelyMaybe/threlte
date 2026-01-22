@@ -7,6 +7,8 @@ type: 'component'
 componentSignature: { props: [{ name: type, type: 'any', required: false }] }
 ---
 
+import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
+
 Use the component `<Sync>` from the [`<SheetObject>`](./sheet-object) slot prop to automatically pick up properties from its parent.
 
 ```svelte

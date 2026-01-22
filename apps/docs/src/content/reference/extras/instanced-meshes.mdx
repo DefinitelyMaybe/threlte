@@ -39,6 +39,8 @@ componentSignature:
   }
 ---
 
+import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
+
 The component `<InstancedMeshes>` takes existing `THREE.Mesh` instances and creates a `THREE.InstancedMesh` per `THREE.Mesh`. This is especially useful if you want to instantiate a lot of meshes that have been loaded with hooks like [`useGltf`](/docs/reference/extras/use-gltf).
 
 It takes the same arguments as [`<InstancedMesh>`](/docs/reference/extras/instanced-mesh).

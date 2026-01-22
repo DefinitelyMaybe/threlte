@@ -8,6 +8,8 @@ componentSignature:
   { extends: { type: 'LOD', url: 'https://threejs.org/docs/#api/en/objects/LOD' }, props: [] }
 ---
 
+import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
+
 `<Detailed>` is an abstraction around Three.js' [LOD](https://threejs.org/docs/#api/en/objects/LOD). A common technique to improve performance is to swap out high-detail models or meshes for low-detail ones at large distances.
 
 <Example path="extras/detailed" />

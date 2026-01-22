@@ -14,6 +14,8 @@ componentSignature:
   }
 ---
 
+import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
+
 `<MeshDiscardMaterial>` is a material that renders nothing. It does so by discarding everything in the fragment shader. The difference between `<T.Mesh visible={false} />` and `<MeshDiscardMaterial>` is that shadows and children are still visible when using `<MeshDiscardMaterial>`.
 
 <Example path="extras/mesh-discard-material" />
