@@ -21,23 +21,6 @@ const entryIsReference = (e: typeof entry): e is CollectionEntry<'reference'> =>
   return (e && e.data && (e.data as any)).schemaType === 'reference'
 }
 
-if (entryIsReference(entry) && entry.data.componentSignature) {
-  const hasEvents = !!entry.data.componentSignature.events?.length
-  const hasProps = !!entry.data.componentSignature.props?.length
-  const hasBindings = !!entry.data.componentSignature.bindings?.length
-
-  if (hasEvents || hasProps || hasBindings) {
-    // we're adding a new heading for the component signature
-    // with the lowest depth of the filtered headings
-    const lowestHeadingDepth = Math.min(...headings.map((heading) => heading.depth))
-    headings.push({
-      depth: lowestHeadingDepth,
-      slug: 'component-signature',
-      text: 'Component Signature'
-    })
-  }
-}
-
 const editUrl = getGithubEditUrl(Astro)
 
 const sourceUrl =
