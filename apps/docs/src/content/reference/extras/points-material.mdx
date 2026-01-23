@@ -4,15 +4,6 @@ category: '@threlte/extras'
 title: '<PointsMaterial>'
 sourcePath: 'packages/extras/src/lib/components/PointsMaterial/PointsMaterial.svelte'
 type: 'component'
-componentSignature:
-  {
-    extends:
-      {
-        type: 'PointsMaterial',
-        url: 'https://threejs.org/docs/index.html#api/en/materials/PointsMaterial'
-      },
-    props: []
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -39,3 +30,15 @@ An extended `THREE.PointsMaterial` that renders antialiased round dots.
   <PointsMaterial />
 </T.Points>
 ```
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: {
+      type: 'PointsMaterial',
+      url: 'https://threejs.org/docs/index.html#api/en/materials/PointsMaterial'
+    },
+    props: []
+  }}
+/>

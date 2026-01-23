@@ -4,11 +4,6 @@ category: '@threlte/extras'
 sourcePath: 'packages/extras/src/lib/components/controls/OrbitControls/OrbitControls.svelte'
 title: '<OrbitControls>'
 type: 'component'
-componentSignature:
-  {
-    extends:
-      { type: 'OrbitControls', url: 'https://threejs.org/docs/#examples/controls/OrbitControls' }
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -52,3 +47,14 @@ docs](https://threejs.org/docs/#examples/en/controls/OrbitControls).
 `<OrbitControls>` is a light wrapper that will use its parent as the target
 camera and the DOM element the renderer is rendering to as the DOM element to
 listen to pointer events.
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: {
+      type: 'OrbitControls',
+      url: 'https://threejs.org/docs/#examples/controls/OrbitControls'
+    }
+  }}
+/>

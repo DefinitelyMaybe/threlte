@@ -4,8 +4,6 @@ category: '@threlte/extras'
 title: '<PortalTarget>'
 sourcePath: 'packages/extras/src/lib/components/portals/PortalTarget/PortalTarget.svelte'
 type: 'component'
-componentSignature:
-  { props: [{ name: 'id', type: 'string', default: '"default"', required: false }] }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -35,3 +33,9 @@ A component that defines a target for a [`<Portal>`](/docs/reference/extras/port
   </T.Mesh>
 </Portal>
 ```
+
+## Component Signature
+
+<ComponentSignature
+  signature={{ props: [{ name: 'id', type: 'string', default: '"default"', required: false }] }}
+/>

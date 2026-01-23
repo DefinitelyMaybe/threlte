@@ -4,8 +4,6 @@ category: '@threlte/extras'
 sourcePath: 'packages/extras/src/lib/components/Detailed/Detailed.svelte'
 title: '<Detailed>'
 type: 'component'
-componentSignature:
-  { extends: { type: 'LOD', url: 'https://threejs.org/docs/#api/en/objects/LOD' }, props: [] }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -47,3 +45,12 @@ Children of `<Detailed>` accept a hysteresis prop which can be used to prevent f
   It is fairly common to export a high-detail, medium-detail, and low-detail model from 3D asset
   creation tools.
 </Tip>
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: { type: 'LOD', url: 'https://threejs.org/docs/#api/en/objects/LOD' },
+    props: []
+  }}
+/>
