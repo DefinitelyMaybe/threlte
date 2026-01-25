@@ -4,15 +4,6 @@ category: '@threlte/theatre'
 title: '<Sheet>'
 sourcePath: 'packages/theatre/src/lib/sheet/Sheet.svelte'
 type: 'component'
-componentSignature:
-  {
-    props:
-      [
-        { name: 'name', type: 'string', default: 'default', required: false },
-        { name: 'instance', type: 'string | undefined', default: 'undefined', required: false }
-      ],
-    bindings: [{ name: project, type: 'IProject' }, { name: sheet, type: 'ISheet' }]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -63,3 +54,18 @@ The first way to control the sequence is using a reactive API with the [`<Sequen
 #### Using the `useSequence` hook
 
 xxx
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    props: [
+      { name: 'name', type: 'string', default: 'default', required: false },
+      { name: 'instance', type: 'string | undefined', default: 'undefined', required: false }
+    ],
+    bindings: [
+      { name: 'project', type: 'IProject' },
+      { name: 'sheet', type: 'ISheet' }
+    ]
+  }}
+/>

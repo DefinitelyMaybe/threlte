@@ -4,14 +4,6 @@ category: '@threlte/rapier'
 sourcePath: 'packages/rapier/src/lib/components/Debug/Debug.svelte'
 title: '<Debug>'
 type: 'component'
-componentSignature:
-  {
-    extends:
-      {
-        type: 'LineBasicMaterial',
-        url: 'https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial'
-      }
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -34,3 +26,14 @@ Use the Debug component to see live representations of all colliders in a scene.
   </World>
 </Canvas>
 ```
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: {
+      type: 'LineBasicMaterial',
+      url: 'https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial'
+    }
+  }}
+/>

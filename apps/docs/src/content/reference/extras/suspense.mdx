@@ -4,33 +4,6 @@ category: '@threlte/extras'
 title: '<Suspense>'
 sourcePath: 'packages/extras/src/lib/suspense/Suspense.svelte'
 type: 'component'
-componentSignature:
-  {
-    props:
-      [
-        {
-          name: 'final',
-          type: 'boolean',
-          default: 'false',
-          description: 'If final is set to true, components cannot re-suspend the suspended state.',
-          required: false
-        }
-      ],
-    events:
-      [
-        {
-          name: 'load',
-          description: 'Fires when all child components wrapped in `suspend` have finished loading.',
-          payload: 'void'
-        },
-        { name: 'suspend', description: 'Fires when a child component suspends.', payload: 'void' },
-        {
-          name: 'error',
-          description: 'Fires when an error is thrown in a child component wrapped in `suspend`.',
-          payload: 'Error'
-        }
-      ]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -167,3 +140,32 @@ The `<Suspense>` component is a great tool to improve the user experience of you
 
 2. Also, in contrast to the React Suspense API, the `<Suspense>` component does not support showing a stale
    version of a child component while it is loading.
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    props: [
+      {
+        name: 'final',
+        type: 'boolean',
+        default: 'false',
+        description: 'If final is set to true, components cannot re-suspend the suspended state.',
+        required: false
+      }
+    ],
+    events: [
+      {
+        name: 'load',
+        description: 'Fires when all child components wrapped in `suspend` have finished loading.',
+        payload: 'void'
+      },
+      { name: 'suspend', description: 'Fires when a child component suspends.', payload: 'void' },
+      {
+        name: 'error',
+        description: 'Fires when an error is thrown in a child component wrapped in `suspend`.',
+        payload: 'Error'
+      }
+    ]
+  }}
+/>

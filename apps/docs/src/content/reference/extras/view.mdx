@@ -4,19 +4,6 @@ category: '@threlte/extras'
 title: '<View>'
 sourcePath: 'packages/extras/src/lib/components/View/View.svelte'
 type: 'component'
-componentSignature:
-  {
-    props:
-      [
-        {
-          name: 'dom',
-          type: 'HTMLElement',
-          default: '',
-          description: 'The target DOM to scissor-cut and attach events. Does nothing if none given.',
-          required: false
-        }
-      ]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -39,3 +26,19 @@ method](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer.setSc
 when using scissor-cuts as the styling of your canvas has different effects on
 the renderering. You access the `canvas` to switch between the options via the
 `useThrelte` hook.
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    props: [
+      {
+        name: 'dom',
+        type: 'HTMLElement',
+        default: '',
+        description: 'The target DOM to scissor-cut and attach events. Does nothing if none given.',
+        required: false
+      }
+    ]
+  }}
+/>

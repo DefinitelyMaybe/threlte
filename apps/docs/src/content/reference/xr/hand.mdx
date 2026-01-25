@@ -3,32 +3,6 @@ category: '@threlte/xr'
 title: '<Hand>'
 order: 2
 type: 'component'
-componentSignature:
-  {
-    events:
-      [
-        {
-          name: 'connected',
-          payload: "XRHandEvent<'connected', null>",
-          description: 'Fired when the hand connects.'
-        },
-        {
-          name: 'disconnected',
-          payload: "XRHandEvent<'connected', null>",
-          description: 'Fired when the hand disconnects.'
-        },
-        {
-          name: 'pinchstart',
-          payload: "XRHandEvent<'pinchstart', THREE.XRHandSpace>",
-          description: 'Fired when a pinch gesture begins.'
-        },
-        {
-          name: 'pinchend',
-          payload: "XRHandEvent<'pinchend', THREE.XRHandSpace>",
-          description: 'Fired when a pinch gesture ends.'
-        }
-      ]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -81,3 +55,32 @@ const { isHandTracking } = useXR()
 Hand tracking can serve as a powerful input device, as any joint position, and not just the wrist, can be read from in real time:
 
 <Example path="xr/hands" />
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    events: [
+      {
+        name: 'connected',
+        payload: "XRHandEvent<'connected', null>",
+        description: 'Fired when the hand connects.'
+      },
+      {
+        name: 'disconnected',
+        payload: "XRHandEvent<'connected', null>",
+        description: 'Fired when the hand disconnects.'
+      },
+      {
+        name: 'pinchstart',
+        payload: "XRHandEvent<'pinchstart', THREE.XRHandSpace>",
+        description: 'Fired when a pinch gesture begins.'
+      },
+      {
+        name: 'pinchend',
+        payload: "XRHandEvent<'pinchend', THREE.XRHandSpace>",
+        description: 'Fired when a pinch gesture ends.'
+      }
+    ]
+  }}
+/>

@@ -4,19 +4,6 @@ category: '@threlte/theatre'
 title: '<Theatre>'
 sourcePath: 'packages/theatre/src/lib/theatre/Theatre.svelte'
 type: 'component'
-componentSignature:
-  {
-    props:
-      [
-        {
-          name: 'studio',
-          type: '{ enabled?: boolean, hide?: boolean }',
-          default: '{}',
-          required: false
-        },
-        { name: 'config', type: 'IProjectConfig', required: false }
-      ]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -61,3 +48,19 @@ The component `<Theatre>` is a good choice if you want to test the waters or to 
   </Theatre>
 </Canvas>
 ```
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    props: [
+      {
+        name: 'studio',
+        type: '{ enabled?: boolean, hide?: boolean }',
+        default: '{}',
+        required: false
+      },
+      { name: 'config', type: 'IProjectConfig', required: false }
+    ]
+  }}
+/>

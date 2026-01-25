@@ -4,7 +4,6 @@ category: '@threlte/theatre'
 sourcePath: 'packages/theatre/src/lib/sheetObject/sync/Sync.svelte'
 title: '<Sync>'
 type: 'component'
-componentSignature: { props: [{ name: type, type: 'any', required: false }] }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -148,3 +147,7 @@ You may also declare transformers directly in the markup:
 `<Transform>` uses transformers to transform the properties `position`, `rotation` and `scale` of a Three.js object to a value that Theatre.js can handle.
 
 </Tip>
+
+## Component Signature
+
+<ComponentSignature signature={{ props: [{ name: 'type', type: 'any', required: false }] }} />

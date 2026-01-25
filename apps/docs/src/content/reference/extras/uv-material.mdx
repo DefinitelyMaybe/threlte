@@ -4,16 +4,6 @@ category: '@threlte/extras'
 title: <UvMaterial>
 sourcePath: 'packages/extras/src/lib/components/UvMaterial/UvMaterial.svelte'
 type: 'component'
-componentSignature:
-  {
-    extends:
-      {
-        type: 'ShaderMaterial',
-        url: 'https://threejs.org/docs/index.html#api/en/objects/ShaderMaterial'
-      },
-    props: [],
-    exports: []
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -49,3 +39,16 @@ geometry.setAttribute('uv', uvAttribute)
 ```
 
 Most models that you import into your program should come with uv data and three.js will automatically assign uv attributes when loading the model.
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: {
+      type: 'ShaderMaterial',
+      url: 'https://threejs.org/docs/index.html#api/en/objects/ShaderMaterial'
+    },
+    props: [],
+    exports: []
+  }}
+/>

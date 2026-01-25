@@ -4,14 +4,6 @@ category: '@threlte/extras'
 sourcePath: 'packages/extras/src/lib/components/controls/TrackballControls/TrackballControls.svelte'
 title: '<TrackballControls>'
 type: 'component'
-componentSignature:
-  {
-    extends:
-      {
-        type: 'TrackballControls',
-        url: 'https://threejs.org/docs/#examples/controls/TrackballControls'
-      }
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -50,3 +42,14 @@ This example shows off just a few of the configurable properties of `<TrackballC
 
 `<TrackballControls>` is a light wrapper that will use its parent as the target camera and the DOM element
 the renderer is rendering to as the DOM element to listen to. It will also by demand invalidate the frame loop.
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    extends: {
+      type: 'TrackballControls',
+      url: 'https://threejs.org/docs/#examples/controls/TrackballControls'
+    }
+  }}
+/>

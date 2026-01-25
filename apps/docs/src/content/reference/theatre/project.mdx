@@ -4,19 +4,6 @@ category: '@threlte/theatre'
 sourcePath: 'packages/theatre/src/lib/project/Project.svelte'
 title: '<Project>'
 type: 'component'
-componentSignature:
-  {
-    props:
-      [
-        {name: 'name', type: 'string', default: 'default', required: false},
-        {name: 'config', type: 'IProjectConfig', required: false},
-      ],
-	bindings:
-	  [
-	    {name: 'project', type: 'IProject'},
-		{name: 'isReady', type: 'boolean'},
-	  ]
-  }
 ---
 
 import ComponentSignature from '$components/ComponentSignature/ComponentSignature.astro'
@@ -73,3 +60,18 @@ The state of a project edited in the [\<Studio\>](./studio) is saved in your bro
   </Sheet>
 </Project>
 ```
+
+## Component Signature
+
+<ComponentSignature
+  signature={{
+    props: [
+      { name: 'name', type: 'string', default: 'default', required: false },
+      { name: 'config', type: 'IProjectConfig', required: false }
+    ],
+    bindings: [
+      { name: 'project', type: 'IProject' },
+      { name: 'isReady', type: 'boolean' }
+    ]
+  }}
+/>
